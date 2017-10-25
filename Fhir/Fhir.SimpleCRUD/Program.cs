@@ -15,6 +15,8 @@ namespace Fhir.SimpleCRUD
 
         public static void Main(string[] args)
         {
+            LogToFile("Begin CRUD - " + DateTime.Now.ToString());
+
             Patient createdPatient = CreatePatient("John", "Doe", new DateTime(1992, 12, 19));
 
             Patient readCreatedPatient = ReadPatient(createdPatient.Id);
@@ -23,9 +25,13 @@ namespace Fhir.SimpleCRUD
 
             Patient readUpdatedPatient = ReadPatient(updatePatient.Id);
 
-            DeletePatient(readUpdatedPatient);
+            //DeletePatient(readUpdatedPatient);
+            //DeletePatientByEndPoint(readUpdatedPatient.Id);
+            DeletePatientBySearchParams(readUpdatedPatient);
 
             Patient readDeletedPatient = ReadPatient(readUpdatedPatient.Id);
+
+            LogToFile("End CRUD - " + DateTime.Now.ToString());
         }
 
         public static Patient CreatePatient(string given, string family, DateTime birthDate)
@@ -165,6 +171,64 @@ namespace Fhir.SimpleCRUD
             }
         }
 
+        public static void DeletePatientByEndPoint(string patientId)
+        {
+            try
+            {
+                UriBuilder uriBuilder = new UriBuilder(FhirClientEndPoint + "Patient/" + patientId);
+
+                LogToFile("Delete Patient");
+
+                LogToFile("Request: ");
+                LogToFile(uriBuilder.Uri.ToString());
+
+                FhirClient fhirClient = new FhirClient(FhirClientEndPoint);
+                fhirClient.Delete(uriBuilder.Uri);
+
+                LogToFile("Response: Delete has no response");
+            }
+            catch (Exception ex)
+            {
+                LogToFile(ex.ToString());
+            }
+        }
+
+        /// <summary>
+        /// Value search parameters for this search are: 
+        /// [_id, _language, active, address, address-city, address-country, address-postalcode, address-state, address-use, 
+        /// animal-breed, animal-species, birthdate, death-date, deceased, email, family, gender, general-practitioner, given, 
+        /// identifier, language, link, name, organization, phone, phonetic, telecom]
+        /// </summary>
+        /// <param name="patient"></param>
+        public static void DeletePatientBySearchParams(Patient patient)
+        {
+            try
+            {
+                LogToFile("Delete Patient");
+
+                LogToFile("Request: ");
+                var patientXml = FhirSerializer.SerializeResourceToXml(patient);
+                LogToFile(XDocument.Parse(patientXml).ToString());
+
+                FhirClient fhirClient = new FhirClient(FhirClientEndPoint);
+
+                SearchParams searchParams = new SearchParams();
+                searchParams.Add("_id", patient.Id);
+
+                fhirClient.Delete("Patient", searchParams);
+
+                LogToFile("Response: Delete has no response");
+            }
+            catch (Exception ex)
+            {
+                LogToFile(ex.ToString());
+            }
+        }
+
+        /// <summary>
+        /// File location: bin\Debug\log.txt
+        /// </summary>
+        /// <param name="xml"></param>
         public static void LogToFile(string xml)
         {
             string path = Directory.GetCurrentDirectory() + "\\log.txt";
