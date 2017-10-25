@@ -15,7 +15,9 @@ namespace Fhir.SimpleCRUD
 
         public static void Main(string[] args)
         {
-            Patient patient = CreatePatient("John", "Doe", new DateTime(1992, 12, 19));
+            Patient createdPatient = CreatePatient("John", "Doe", new DateTime(1992, 12, 19));
+
+            Patient readPatient = ReadPatient(createdPatient.Id);
         }
 
         public static Patient CreatePatient(string given, string family, DateTime birthDate)
@@ -72,6 +74,32 @@ namespace Fhir.SimpleCRUD
                 LogToFile(XDocument.Parse(responsePatientXml).ToString());
             }
             catch(Exception ex)
+            {
+                LogToFile(ex.ToString());
+            }
+
+            return responsePatient;
+        }
+
+        public static Patient ReadPatient(string patientId)
+        {
+            Patient responsePatient = new Patient();
+
+            try
+            {
+                LogToFile("Read Patient");
+
+                string location = $"Patient/{patientId}";
+                LogToFile("Request: \n\n" + location);
+                
+                FhirClient fhirClient = new FhirClient(FhirClientEndPoint);
+                responsePatient = fhirClient.Read<Patient>(location);
+
+                LogToFile("Response: ");
+                var responsePatientXml = FhirSerializer.SerializeResourceToXml(responsePatient);
+                LogToFile(XDocument.Parse(responsePatientXml).ToString());
+            }
+            catch (Exception ex)
             {
                 LogToFile(ex.ToString());
             }
