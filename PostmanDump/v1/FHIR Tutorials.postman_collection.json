@@ -1,0 +1,1528 @@
+{
+	"variables": [],
+	"info": {
+		"name": "FHIR Tutorials",
+		"_postman_id": "261039e6-47fd-b3bd-23dd-4672296c1e67",
+		"description": "Store all the api calls done during FHIR tutorials",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Simple Patient",
+			"description": "All operations done related to patient resource",
+			"item": [
+				{
+					"name": "Get Patient",
+					"request": {
+						"url": "https://{{ServerAddress}}/Patient/5a088384-a9d2-45db-89a9-eaafeb54b6a5",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "{{ContentType}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "Get patient resource"
+					},
+					"response": [
+						{
+							"id": "3a15230d-21f1-48bd-aa9c-69554c1e4b4d",
+							"name": "Get Patient 5a088384-a9d2-45db-89a9-eaafeb54b6a5",
+							"originalRequest": {
+								"url": "https://{{ServerAddress}}/Patient/5a088384-a9d2-45db-89a9-eaafeb54b6a5",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{Accept}}",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{ContentType}}",
+										"description": ""
+									}
+								],
+								"body": {}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "content-length",
+									"key": "content-length",
+									"value": "1520",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/fhir+xml; charset=utf-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Fri, 20 Oct 2017 10:48:10 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "etag",
+									"key": "etag",
+									"value": "W/\"8\"",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"name": "last-modified",
+									"key": "last-modified",
+									"value": "Fri, 20 Oct 2017 10:37:27 GMT",
+									"description": "The last modified date for the requested object, in RFC 2822 format"
+								},
+								{
+									"name": "location",
+									"key": "location",
+									"value": "https://pyrohealth.net/test/stu3/fhir/Patient/5a088384-a9d2-45db-89a9-eaafeb54b6a5",
+									"description": "Used in redirection, or when a new resource has been created."
+								},
+								{
+									"name": "server",
+									"key": "server",
+									"value": "Microsoft-IIS/8.5",
+									"description": "A name for the server"
+								},
+								{
+									"name": "x-powered-by",
+									"key": "x-powered-by",
+									"value": "ASP.NET",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"responseTime": 400,
+							"body": "<Patient xmlns=\"http://hl7.org/fhir\"><id value=\"5a088384-a9d2-45db-89a9-eaafeb54b6a5\" /><meta><versionId value=\"8\" /><lastUpdated value=\"2017-10-20T10:37:27.57+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Some, Evans</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Trunks Evans\" /><family value=\"Evans\" /><given value=\"Trunks\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient>"
+						},
+						{
+							"id": "269f5e58-b43f-41fa-b6dd-d70c9c3fc939",
+							"name": "Get Patient 03f0b0d0-368e-4c91-9396-217975354796",
+							"originalRequest": {
+								"url": "https://{{ServerAddress}}/Patient/03f0b0d0-368e-4c91-9396-217975354796",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{Accept}}",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{ContentType}}",
+										"description": ""
+									}
+								],
+								"body": {}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "content-length",
+									"key": "content-length",
+									"value": "1523",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/fhir+xml; charset=utf-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Fri, 20 Oct 2017 10:49:15 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "etag",
+									"key": "etag",
+									"value": "W/\"1\"",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"name": "last-modified",
+									"key": "last-modified",
+									"value": "Fri, 20 Oct 2017 10:38:03 GMT",
+									"description": "The last modified date for the requested object, in RFC 2822 format"
+								},
+								{
+									"name": "location",
+									"key": "location",
+									"value": "https://pyrohealth.net/test/stu3/fhir/Patient/03f0b0d0-368e-4c91-9396-217975354796",
+									"description": "Used in redirection, or when a new resource has been created."
+								},
+								{
+									"name": "server",
+									"key": "server",
+									"value": "Microsoft-IIS/8.5",
+									"description": "A name for the server"
+								},
+								{
+									"name": "x-powered-by",
+									"key": "x-powered-by",
+									"value": "ASP.NET",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"responseTime": 432,
+							"body": "<Patient xmlns=\"http://hl7.org/fhir\"><id value=\"03f0b0d0-368e-4c91-9396-217975354796\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-10-20T10:38:03.257+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Trunks, Evans</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Trunks Evans\" /><family value=\"Evans\" /><given value=\"Trunks\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient>"
+						}
+					]
+				},
+				{
+					"name": "Update Patient",
+					"request": {
+						"url": "https://{{ServerAddress}}/Patient/5a088384-a9d2-45db-89a9-eaafeb54b6a5",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "{{ContentType}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "Udpate Patient with http put verb"
+					},
+					"response": [
+						{
+							"id": "bcf013b4-630b-44a1-b79a-28f9c705baff",
+							"name": "Update Patient - with out body content",
+							"originalRequest": {
+								"url": "https://{{ServerAddress}}/Patient/5a088384-a9d2-45db-89a9-eaafeb54b6a5",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{Accept}}",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{ContentType}}",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "xml",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "content-length",
+									"key": "content-length",
+									"value": "1026",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/fhir+xml; charset=utf-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Fri, 20 Oct 2017 10:53:31 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "server",
+									"key": "server",
+									"value": "Microsoft-IIS/8.5",
+									"description": "A name for the server"
+								},
+								{
+									"name": "x-powered-by",
+									"key": "x-powered-by",
+									"value": "ASP.NET",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"responseTime": 3867,
+							"body": "<OperationOutcome xmlns=\"http://hl7.org/fhir\"><text><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <div>\r\n    <h4>OperationOutcome Issue: 1</h4>\r\n    <table>\r\n      <tr>\r\n        <td>\r\n          <span>\r\n            <b>Severity: </b>\r\n          </span>\r\n        </td>\r\n        <td>\r\n          <span>fatal</span>\r\n        </td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          <span>\r\n            <b>Type: </b>\r\n          </span>\r\n        </td>\r\n        <td>\r\n          <span>invalid</span>\r\n        </td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          <span>\r\n            <b>Detail Text: </b>\r\n          </span>\r\n        </td>\r\n        <td>\r\n          <span>The server was expecting a FHIR resource in the request body and found the body empty.</span>\r\n        </td>\r\n      </tr>\r\n    </table>\r\n  </div>\r\n</div></text><issue><severity value=\"fatal\" /><code value=\"invalid\" /><details><text value=\"The server was expecting a FHIR resource in the request body and found the body empty.\" /></details></issue></OperationOutcome>"
+						},
+						{
+							"id": "662581a5-7bb3-4779-80c7-8dc020fbb622",
+							"name": "Update Patient - p tag, given and family properties",
+							"originalRequest": {
+								"url": "https://{{ServerAddress}}/Patient/5a088384-a9d2-45db-89a9-eaafeb54b6a5",
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{Accept}}",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{ContentType}}",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<Patient xmlns=\"http://hl7.org/fhir\">\r\n    <id value=\"5a088384-a9d2-45db-89a9-eaafeb54b6a5\" />\r\n    <meta>\r\n        <versionId value=\"10\" />\r\n        <lastUpdated value=\"2017-10-20T09:58:08.82+00:00\" />\r\n    </meta>\r\n    <text>\r\n        <status value=\"generated\" />\r\n        <div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n            <p>Patient: Ros</p>\r\n        </div>\r\n    </text>\r\n    <identifier>\r\n        <type>\r\n            <coding>\r\n                <system value=\"http://hl7.org/fhir/v2/0203\" />\r\n                <code value=\"NI\" />\r\n                <display value=\"National unique individual identifier\" />\r\n            </coding>\r\n            <text value=\"IHI\" />\r\n        </type>\r\n        <system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" />\r\n        <value value=\"8003608166690503\" />\r\n    </identifier>\r\n    <identifier>\r\n        <use value=\"usual\" />\r\n        <type>\r\n            <coding>\r\n                <system value=\"http://hl7.org/fhir/v2/0203\" />\r\n                <code value=\"MR\" />\r\n            </coding>\r\n        </type>\r\n        <system value=\"urn:oid:1.2.36.146.595.217.0.1\" />\r\n        <value value=\"6666\" />\r\n        <period>\r\n            <start value=\"2001-05-06\" />\r\n        </period>\r\n        <assigner>\r\n            <display value=\"Acme Healthcare\" />\r\n        </assigner>\r\n    </identifier>\r\n    <name>\r\n        <use value=\"official\" />\r\n        <text value=\"Ros Evans\" />\r\n        <family value=\"Evans\" />\r\n        <given value=\"Ros\" />\r\n        <prefix value=\"Mr\" />\r\n    </name>\r\n    <telecom>\r\n        <system value=\"phone\" />\r\n        <value value=\"+61481059995\" />\r\n        <use value=\"mobile\" />\r\n    </telecom>\r\n    <gender value=\"male\" />\r\n    <birthDate value=\"1973-09-30\" />\r\n    <address>\r\n        <use value=\"work\" />\r\n        <line value=\"400 George Street\" />\r\n        <city value=\"Brisbane\" />\r\n        <state value=\"QLD\" />\r\n        <postalCode value=\"4000\" />\r\n        <country value=\"AUS\" />\r\n    </address>\r\n    <maritalStatus>\r\n        <coding>\r\n            <system value=\"http://hl7.org/fhir/v3/MaritalStatus\" />\r\n            <code value=\"M\" />\r\n            <display value=\"Married\" />\r\n        </coding>\r\n    </maritalStatus>\r\n</Patient>"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "content-length",
+									"key": "content-length",
+									"value": "1508",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/fhir+xml; charset=utf-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Fri, 20 Oct 2017 10:57:31 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "etag",
+									"key": "etag",
+									"value": "W/\"12\"",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"name": "last-modified",
+									"key": "last-modified",
+									"value": "Fri, 20 Oct 2017 10:57:31 GMT",
+									"description": "The last modified date for the requested object, in RFC 2822 format"
+								},
+								{
+									"name": "location",
+									"key": "location",
+									"value": "https://pyrohealth.net/test/stu3/fhir/Patient/5a088384-a9d2-45db-89a9-eaafeb54b6a5",
+									"description": "Used in redirection, or when a new resource has been created."
+								},
+								{
+									"name": "server",
+									"key": "server",
+									"value": "Microsoft-IIS/8.5",
+									"description": "A name for the server"
+								},
+								{
+									"name": "x-powered-by",
+									"key": "x-powered-by",
+									"value": "ASP.NET",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"responseTime": 774,
+							"body": "<Patient xmlns=\"http://hl7.org/fhir\"><id value=\"5a088384-a9d2-45db-89a9-eaafeb54b6a5\" /><meta><versionId value=\"12\" /><lastUpdated value=\"2017-10-20T10:57:31.343+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Ros</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Ros Evans\" /><family value=\"Evans\" /><given value=\"Ros\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient>"
+						}
+					]
+				},
+				{
+					"name": "Create Patient",
+					"request": {
+						"url": "https://{{ServerAddress}}/Patient",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/fhir+xml",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/fhir+xml",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "Create patient"
+					},
+					"response": [
+						{
+							"id": "d8366bf2-c1ef-4271-bf8c-7c29cfbc99f2",
+							"name": "Create Patient - Error because of Id tag not removed",
+							"originalRequest": {
+								"url": "https://{{ServerAddress}}/Patient",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/fhir+xml",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/fhir+xml",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<Patient xmlns=\"http://hl7.org/fhir\">\r\n    <id value=\"5a088384-a9d2-45db-89a9-eaafeb54b6a5\" />\r\n    <meta>\r\n        <versionId value=\"10\" />\r\n        <lastUpdated value=\"2017-10-20T09:58:08.82+00:00\" />\r\n    </meta>\r\n    <text>\r\n        <status value=\"generated\" />\r\n        <div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n            <p>Patient: John, Doe</p>\r\n        </div>\r\n    </text>\r\n    <identifier>\r\n        <type>\r\n            <coding>\r\n                <system value=\"http://hl7.org/fhir/v2/0203\" />\r\n                <code value=\"NI\" />\r\n                <display value=\"National unique individual identifier\" />\r\n            </coding>\r\n            <text value=\"IHI\" />\r\n        </type>\r\n        <system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" />\r\n        <value value=\"8003608166690503\" />\r\n    </identifier>\r\n    <identifier>\r\n        <use value=\"usual\" />\r\n        <type>\r\n            <coding>\r\n                <system value=\"http://hl7.org/fhir/v2/0203\" />\r\n                <code value=\"MR\" />\r\n            </coding>\r\n        </type>\r\n        <system value=\"urn:oid:1.2.36.146.595.217.0.1\" />\r\n        <value value=\"6666\" />\r\n        <period>\r\n            <start value=\"2001-05-06\" />\r\n        </period>\r\n        <assigner>\r\n            <display value=\"Acme Healthcare\" />\r\n        </assigner>\r\n    </identifier>\r\n    <name>\r\n        <use value=\"official\" />\r\n        <text value=\"John Doe\" />\r\n        <family value=\"Doe\" />\r\n        <given value=\"Jonn\" />\r\n        <prefix value=\"Mr\" />\r\n    </name>\r\n    <telecom>\r\n        <system value=\"phone\" />\r\n        <value value=\"+61481059995\" />\r\n        <use value=\"mobile\" />\r\n    </telecom>\r\n    <gender value=\"male\" />\r\n    <birthDate value=\"1973-09-30\" />\r\n    <address>\r\n        <use value=\"work\" />\r\n        <line value=\"400 George Street\" />\r\n        <city value=\"Brisbane\" />\r\n        <state value=\"QLD\" />\r\n        <postalCode value=\"4000\" />\r\n        <country value=\"AUS\" />\r\n    </address>\r\n    <maritalStatus>\r\n        <coding>\r\n            <system value=\"http://hl7.org/fhir/v3/MaritalStatus\" />\r\n            <code value=\"M\" />\r\n            <display value=\"Married\" />\r\n        </coding>\r\n    </maritalStatus>\r\n</Patient>"
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "xml",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "content-length",
+									"key": "content-length",
+									"value": "1667",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/fhir+xml; charset=utf-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Fri, 20 Oct 2017 11:01:11 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "server",
+									"key": "server",
+									"value": "Microsoft-IIS/8.5",
+									"description": "A name for the server"
+								},
+								{
+									"name": "x-powered-by",
+									"key": "x-powered-by",
+									"value": "ASP.NET",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"responseTime": 4404,
+							"body": "<OperationOutcome xmlns=\"http://hl7.org/fhir\"><text><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <div>\r\n    <h4>OperationOutcome Issue: 1</h4>\r\n    <table>\r\n      <tr>\r\n        <td>\r\n          <span>\r\n            <b>Severity: </b>\r\n          </span>\r\n        </td>\r\n        <td>\r\n          <span>error</span>\r\n        </td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          <span>\r\n            <b>Type: </b>\r\n          </span>\r\n        </td>\r\n        <td>\r\n          <span>required</span>\r\n        </td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          <span>\r\n            <b>Detail Text: </b>\r\n          </span>\r\n        </td>\r\n        <td>\r\n          <span>The create (POST) interaction creates a new resource in a server-assigned location. If the client wishes to have control over the id of a newly submitted resource, it should use the update interaction instead. The Resource provide was found to contain the id: 5a088384-a9d2-45db-89a9-eaafeb54b6a5</span>\r\n        </td>\r\n      </tr>\r\n      <tr>\r\n        <td>\r\n          <span>\r\n            <b>Location: </b>\r\n          </span>\r\n        </td>\r\n        <td>\r\n          <span>Resource.Id</span>\r\n        </td>\r\n      </tr>\r\n    </table>\r\n  </div>\r\n</div></text><issue><severity value=\"error\" /><code value=\"required\" /><details><text value=\"The create (POST) interaction creates a new resource in a server-assigned location. If the client wishes to have control over the id of a newly submitted resource, it should use the update interaction instead. The Resource provide was found to contain the id: 5a088384-a9d2-45db-89a9-eaafeb54b6a5\" /></details><location value=\"Resource.Id\" /></issue></OperationOutcome>"
+						},
+						{
+							"id": "025f959e-6c9f-41d3-a12a-9d04cabaf3d5",
+							"name": "Create Patient - created new patient",
+							"originalRequest": {
+								"url": "https://{{ServerAddress}}/Patient",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/fhir+xml",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/fhir+xml",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "<Patient xmlns=\"http://hl7.org/fhir\">\r\n    <meta>\r\n        <versionId value=\"10\" />\r\n        <lastUpdated value=\"2017-10-20T09:58:08.82+00:00\" />\r\n    </meta>\r\n    <text>\r\n        <status value=\"generated\" />\r\n        <div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n            <p>Patient: John, Doe</p>\r\n        </div>\r\n    </text>\r\n    <identifier>\r\n        <type>\r\n            <coding>\r\n                <system value=\"http://hl7.org/fhir/v2/0203\" />\r\n                <code value=\"NI\" />\r\n                <display value=\"National unique individual identifier\" />\r\n            </coding>\r\n            <text value=\"IHI\" />\r\n        </type>\r\n        <system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" />\r\n        <value value=\"8003608166690503\" />\r\n    </identifier>\r\n    <identifier>\r\n        <use value=\"usual\" />\r\n        <type>\r\n            <coding>\r\n                <system value=\"http://hl7.org/fhir/v2/0203\" />\r\n                <code value=\"MR\" />\r\n            </coding>\r\n        </type>\r\n        <system value=\"urn:oid:1.2.36.146.595.217.0.1\" />\r\n        <value value=\"6666\" />\r\n        <period>\r\n            <start value=\"2001-05-06\" />\r\n        </period>\r\n        <assigner>\r\n            <display value=\"Acme Healthcare\" />\r\n        </assigner>\r\n    </identifier>\r\n    <name>\r\n        <use value=\"official\" />\r\n        <text value=\"John Doe\" />\r\n        <family value=\"Doe\" />\r\n        <given value=\"Jonn\" />\r\n        <prefix value=\"Mr\" />\r\n    </name>\r\n    <telecom>\r\n        <system value=\"phone\" />\r\n        <value value=\"+61481059995\" />\r\n        <use value=\"mobile\" />\r\n    </telecom>\r\n    <gender value=\"male\" />\r\n    <birthDate value=\"1973-09-30\" />\r\n    <address>\r\n        <use value=\"work\" />\r\n        <line value=\"400 George Street\" />\r\n        <city value=\"Brisbane\" />\r\n        <state value=\"QLD\" />\r\n        <postalCode value=\"4000\" />\r\n        <country value=\"AUS\" />\r\n    </address>\r\n    <maritalStatus>\r\n        <coding>\r\n            <system value=\"http://hl7.org/fhir/v3/MaritalStatus\" />\r\n            <code value=\"M\" />\r\n            <display value=\"Married\" />\r\n        </coding>\r\n    </maritalStatus>\r\n</Patient>"
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "xml",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "content-length",
+									"key": "content-length",
+									"value": "1511",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/fhir+xml; charset=utf-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Fri, 20 Oct 2017 11:02:26 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "etag",
+									"key": "etag",
+									"value": "W/\"1\"",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"name": "last-modified",
+									"key": "last-modified",
+									"value": "Fri, 20 Oct 2017 11:02:26 GMT",
+									"description": "The last modified date for the requested object, in RFC 2822 format"
+								},
+								{
+									"name": "location",
+									"key": "location",
+									"value": "https://pyrohealth.net/test/stu3/fhir/877633b4-237c-4d11-864a-406cfd53a43e",
+									"description": "Used in redirection, or when a new resource has been created."
+								},
+								{
+									"name": "server",
+									"key": "server",
+									"value": "Microsoft-IIS/8.5",
+									"description": "A name for the server"
+								},
+								{
+									"name": "x-powered-by",
+									"key": "x-powered-by",
+									"value": "ASP.NET",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"responseTime": 2405,
+							"body": "<Patient xmlns=\"http://hl7.org/fhir\"><id value=\"877633b4-237c-4d11-864a-406cfd53a43e\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-10-20T11:02:26.412+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: John, Doe</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"John Doe\" /><family value=\"Doe\" /><given value=\"Jonn\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient>"
+						}
+					]
+				},
+				{
+					"name": "Delete Patient",
+					"request": {
+						"url": "https://{{ServerAddress}}/Patient/03f0b0d0-368e-4c91-9396-217975354796",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "{{ContentType}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get Patient From History",
+					"request": {
+						"url": "https://{{ServerAddress}}/Patient/03f0b0d0-368e-4c91-9396-217975354796/_history/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "{{ContentType}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "Get delete patient from history"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Simple Search",
+			"description": "",
+			"item": [
+				{
+					"name": "Name Searching",
+					"request": {
+						"url": {
+							"raw": "https://{{ServerAddress}}/Patient?family=fhirman",
+							"protocol": "https",
+							"host": [
+								"{{ServerAddress}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "family",
+									"value": "fhirman",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": "Seach patient's by family name\n\nNote: That the call will return a bundle resource. When we perform a search you are more than likely to receive many resource into a single instance."
+					},
+					"response": [
+						{
+							"id": "febd14a9-21ff-44c6-9a12-c280bdd90ad0",
+							"name": "Name Searching - family doe - the search is case insensitive",
+							"originalRequest": {
+								"url": {
+									"raw": "https://{{ServerAddress}}/Patient?family=doe",
+									"protocol": "https",
+									"host": [
+										"{{ServerAddress}}"
+									],
+									"path": [
+										"Patient"
+									],
+									"query": [
+										{
+											"key": "family",
+											"value": "doe",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{Accept}}",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "",
+										"value": "",
+										"description": "",
+										"warning": "",
+										"disabled": true
+									}
+								],
+								"body": {}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "content-length",
+									"key": "content-length",
+									"value": "2103",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/fhir+xml; charset=utf-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Fri, 20 Oct 2017 11:58:22 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "server",
+									"key": "server",
+									"value": "Microsoft-IIS/8.5",
+									"description": "A name for the server"
+								},
+								{
+									"name": "x-powered-by",
+									"key": "x-powered-by",
+									"value": "ASP.NET",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"responseTime": 537,
+							"body": "<Bundle xmlns=\"http://hl7.org/fhir\"><type value=\"searchset\" /><total value=\"1\" /><link><relation value=\"first\" /><url value=\"https://pyrohealth.net/test/stu3/fhir/Patient?family=doe&amp;page=1\" /></link><link><relation value=\"last\" /><url value=\"https://pyrohealth.net/test/stu3/fhir/Patient?family=doe&amp;page=1\" /></link><link><relation value=\"self\" /><url value=\"https://pyrohealth.net/test/stu3/fhir/Patient?family=doe\" /></link><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/877633b4-237c-4d11-864a-406cfd53a43e\" /><resource><Patient><id value=\"877633b4-237c-4d11-864a-406cfd53a43e\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-10-20T11:02:26.412+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: John, Doe</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"John Doe\" /><family value=\"Doe\" /><given value=\"Jonn\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry></Bundle>"
+						},
+						{
+							"id": "315ddbef-125b-4f1c-abb0-91282f9079bc",
+							"name": "Name Searching - family fhirman",
+							"originalRequest": {
+								"url": {
+									"raw": "https://{{ServerAddress}}/Patient?family=fhirman",
+									"protocol": "https",
+									"host": [
+										"{{ServerAddress}}"
+									],
+									"path": [
+										"Patient"
+									],
+									"query": [
+										{
+											"key": "family",
+											"value": "fhirman",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{Accept}}",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "",
+										"value": "",
+										"description": "",
+										"warning": "",
+										"disabled": true
+									}
+								],
+								"body": {}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "content-length",
+									"key": "content-length",
+									"value": "80730",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/fhir+xml; charset=utf-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Fri, 20 Oct 2017 12:00:46 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "server",
+									"key": "server",
+									"value": "Microsoft-IIS/8.5",
+									"description": "A name for the server"
+								},
+								{
+									"name": "x-powered-by",
+									"key": "x-powered-by",
+									"value": "ASP.NET",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"responseTime": 4519,
+							"body": "<Bundle xmlns=\"http://hl7.org/fhir\"><type value=\"searchset\" /><total value=\"362\" /><link><relation value=\"first\" /><url value=\"https://pyrohealth.net/test/stu3/fhir/Patient?family=fhirman&amp;page=1\" /></link><link><relation value=\"last\" /><url value=\"https://pyrohealth.net/test/stu3/fhir/Patient?family=fhirman&amp;page=8\" /></link><link><relation value=\"next\" /><url value=\"https://pyrohealth.net/test/stu3/fhir/Patient?family=fhirman&amp;page=2\" /></link><link><relation value=\"self\" /><url value=\"https://pyrohealth.net/test/stu3/fhir/Patient?family=fhirman\" /></link><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/7c4cf00a-8bb4-4a66-a70a-44590604fbe2\" /><resource><Patient><id value=\"7c4cf00a-8bb4-4a66-a70a-44590604fbe2\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-07-25T07:56:39.963+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/1f652af6-676b-44f9-8550-a4f6e69f40de\" /><resource><Patient><id value=\"1f652af6-676b-44f9-8550-a4f6e69f40de\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-07-25T10:03:26.53+00:00\" /></meta><identifier><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><name><use value=\"official\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/b0d7e2f6-bf5c-4280-8761-2b3430fa1222\" /><resource><Patient><id value=\"b0d7e2f6-bf5c-4280-8761-2b3430fa1222\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-07-25T11:51:20.166+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/e8f86cc0-ed4d-46ed-a7e8-5bfc4e13f822\" /><resource><Patient><id value=\"e8f86cc0-ed4d-46ed-a7e8-5bfc4e13f822\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-07-25T14:39:11.445+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/d7164396-4a38-4795-b3c9-18d25af37930\" /><resource><Patient><id value=\"d7164396-4a38-4795-b3c9-18d25af37930\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-07-25T16:25:23.162+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/1be17c2c-b2c2-485d-87f8-1c937158cd70\" /><resource><Patient><id value=\"1be17c2c-b2c2-485d-87f8-1c937158cd70\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-07-25T18:28:15.911+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/5848d380-6f4d-4688-97c1-2f2f38658c48\" /><resource><Patient><id value=\"5848d380-6f4d-4688-97c1-2f2f38658c48\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-07-26T02:08:16.061+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/7b03b8aa-1e4c-4084-ad1c-93c21391f6cb\" /><resource><Patient><id value=\"7b03b8aa-1e4c-4084-ad1c-93c21391f6cb\" /><meta><versionId value=\"2\" /><lastUpdated value=\"2017-07-26T03:10:22.028+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Joseph Fhirman\" /><family value=\"Fhirman\" /><given value=\"Joseph\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/69c0f40f-d792-4595-a72f-75b8c7f37a37\" /><resource><Patient><id value=\"69c0f40f-d792-4595-a72f-75b8c7f37a37\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-07-26T09:52:49.936+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/458b4232-de44-4e69-8cb5-32a490579990\" /><resource><Patient><id value=\"458b4232-de44-4e69-8cb5-32a490579990\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-07-26T18:38:50.811+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/b6af35c3-ac15-4469-8e42-b7a8ba71381a\" /><resource><Patient><id value=\"b6af35c3-ac15-4469-8e42-b7a8ba71381a\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-07-26T18:45:59.283+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/a6f05331-ccb6-416c-a446-c51f03c4f937\" /><resource><Patient><id value=\"a6f05331-ccb6-416c-a446-c51f03c4f937\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-07-27T19:41:03.916+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/776d12ed-a17c-4f40-9442-362fba71840f\" /><resource><Patient><id value=\"776d12ed-a17c-4f40-9442-362fba71840f\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-07-27T20:00:34.803+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/faa71eb7-7720-46e4-83fd-384c47b21c3f\" /><resource><Patient><id value=\"faa71eb7-7720-46e4-83fd-384c47b21c3f\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-07-27T20:48:16.843+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/a12b24c6-b758-4286-a39c-db89c185b306\" /><resource><Patient><id value=\"a12b24c6-b758-4286-a39c-db89c185b306\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-07-27T23:36:37.418+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/57fb16fa-3a53-4df5-b700-50abb7a4e2aa\" /><resource><Patient><id value=\"57fb16fa-3a53-4df5-b700-50abb7a4e2aa\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-07-28T17:30:34.27+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/55f305c8-089e-422e-bbd5-29576e4ba083\" /><resource><Patient><id value=\"55f305c8-089e-422e-bbd5-29576e4ba083\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-07-28T22:54:50.114+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/44a322c6-5f14-44e4-b1e1-bab38777a770\" /><resource><Patient><id value=\"44a322c6-5f14-44e4-b1e1-bab38777a770\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-07-29T21:12:49.738+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/46d841c8-dad1-4470-8d4e-f7fff3249912\" /><resource><Patient><id value=\"46d841c8-dad1-4470-8d4e-f7fff3249912\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-07-30T11:59:52.844+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/e5a55aaa-a206-4752-af4f-c9d935f68744\" /><resource><Patient><id value=\"e5a55aaa-a206-4752-af4f-c9d935f68744\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-07-30T12:07:00.691+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/4c30adba-671d-48db-a785-875d2462b687\" /><resource><Patient><id value=\"4c30adba-671d-48db-a785-875d2462b687\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-07-31T07:12:35.79+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/9cfd2c71-7317-4db1-a664-3b75cfc2456b\" /><resource><Patient><id value=\"9cfd2c71-7317-4db1-a664-3b75cfc2456b\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-07-31T15:06:41.977+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/6289a8c9-99dc-4edf-bba0-5686938f86ba\" /><resource><Patient><id value=\"6289a8c9-99dc-4edf-bba0-5686938f86ba\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-07-31T18:48:41.3+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/32bfcedf-f0ba-451e-b8ce-c5197b14e2a4\" /><resource><Patient><id value=\"32bfcedf-f0ba-451e-b8ce-c5197b14e2a4\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-07-31T18:48:44.253+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/ce4d14a0-827c-418a-9782-a913c8905370\" /><resource><Patient><id value=\"ce4d14a0-827c-418a-9782-a913c8905370\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-08-01T06:08:26.917+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/7d73a58e-be23-4634-9cde-47685cc263a9\" /><resource><Patient><id value=\"7d73a58e-be23-4634-9cde-47685cc263a9\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-08-01T10:00:13.207+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/58dd9393-ca6f-457d-9dcf-c9b19bf34d5a\" /><resource><Patient><id value=\"58dd9393-ca6f-457d-9dcf-c9b19bf34d5a\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-08-01T10:46:37.327+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/953b05a3-185b-495e-b72b-140b426faaf0\" /><resource><Patient><id value=\"953b05a3-185b-495e-b72b-140b426faaf0\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-08-01T13:59:50.093+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/f1cc6e9e-964c-48b9-be94-e61ad9193ce7\" /><resource><Patient><id value=\"f1cc6e9e-964c-48b9-be94-e61ad9193ce7\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-08-01T14:03:06.43+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/6a6bdf24-70f6-4f74-aff1-de38056d5a90\" /><resource><Patient><id value=\"6a6bdf24-70f6-4f74-aff1-de38056d5a90\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-08-01T14:26:35.764+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/8ba231b6-abe4-4669-8691-a3351d8588f5\" /><resource><Patient><id value=\"8ba231b6-abe4-4669-8691-a3351d8588f5\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-08-01T14:33:23.423+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/1e66f05c-a435-401d-b0ee-8df92ae522d3\" /><resource><Patient><id value=\"1e66f05c-a435-401d-b0ee-8df92ae522d3\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-08-01T14:33:26.673+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/1548df35-fe2e-4974-a977-ed056c181209\" /><resource><Patient><id value=\"1548df35-fe2e-4974-a977-ed056c181209\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-08-01T14:42:13.439+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/35185c99-011e-41ff-b287-b6d0b1ba5832\" /><resource><Patient><id value=\"35185c99-011e-41ff-b287-b6d0b1ba5832\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-08-01T21:21:28.649+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/c0af045e-f0f9-4a39-af4f-900c3c697d27\" /><resource><Patient><id value=\"c0af045e-f0f9-4a39-af4f-900c3c697d27\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-08-02T18:24:04.181+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/06f67193-9758-48f3-8834-3c717ad08c82\" /><resource><Patient><id value=\"06f67193-9758-48f3-8834-3c717ad08c82\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-08-02T18:34:25.694+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/da4b9c38-5d8a-4870-a87a-277d7c345579\" /><resource><Patient><id value=\"da4b9c38-5d8a-4870-a87a-277d7c345579\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-08-02T18:40:56.776+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/eea5cc56-cfbe-4b31-ae6b-c7ece05b8922\" /><resource><Patient><id value=\"eea5cc56-cfbe-4b31-ae6b-c7ece05b8922\" /><meta><versionId value=\"2\" /><lastUpdated value=\"2017-08-02T20:38:24.426+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MRS\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"NotFhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/da2bbf5f-4cf1-490d-9f0a-949751750e0a\" /><resource><Patient><id value=\"da2bbf5f-4cf1-490d-9f0a-949751750e0a\" /><meta><versionId value=\"2\" /><lastUpdated value=\"2017-08-02T23:01:51.936+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam2 Fhirman2\" /><family value=\"Fhirman2\" /><given value=\"Sam2\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/e0340233-6735-4d85-addc-f0b32983e60d\" /><resource><Patient><id value=\"e0340233-6735-4d85-addc-f0b32983e60d\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-08-03T08:40:47.17+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/15f443e9-6bb9-4a81-964b-c60da183559f\" /><resource><Patient><id value=\"15f443e9-6bb9-4a81-964b-c60da183559f\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-08-03T09:46:34.131+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/72a77e92-eb27-4b92-912b-0abb6907a5dc\" /><resource><Patient><id value=\"72a77e92-eb27-4b92-912b-0abb6907a5dc\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-08-03T11:31:05.148+00:00\" /></meta><identifier><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><name><use value=\"official\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/da27c1a9-1650-48ac-a0a9-6d296f5892be\" /><resource><Patient><id value=\"da27c1a9-1650-48ac-a0a9-6d296f5892be\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-08-03T11:38:56.009+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/13dd60bc-666e-4df2-9ec4-60249439729b\" /><resource><Patient><id value=\"13dd60bc-666e-4df2-9ec4-60249439729b\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-08-03T11:47:46.743+00:00\" /></meta><identifier><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><name><use value=\"official\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/477c7a3e-b391-49f6-acf8-5d055c500abe\" /><resource><Patient><id value=\"477c7a3e-b391-49f6-acf8-5d055c500abe\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-08-03T15:02:48.365+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/b5bf55d6-18ce-44ed-84df-039796a32f07\" /><resource><Patient><id value=\"b5bf55d6-18ce-44ed-84df-039796a32f07\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-08-03T15:02:49.911+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/a9845619-e954-46f2-a0b8-025601e85f94\" /><resource><Patient><id value=\"a9845619-e954-46f2-a0b8-025601e85f94\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-08-03T15:02:53.114+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/37455096-7410-42a4-85a3-3a1b6d53b3f6\" /><resource><Patient><id value=\"37455096-7410-42a4-85a3-3a1b6d53b3f6\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-08-03T17:48:14.164+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/836620ae-1d52-4dc1-846b-a033768dd09d\" /><resource><Patient><id value=\"836620ae-1d52-4dc1-846b-a033768dd09d\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-08-03T18:34:16.394+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Patient/06f508b2-7a91-4fb1-be85-a8766e8b33d2\" /><resource><Patient><id value=\"06f508b2-7a91-4fb1-be85-a8766e8b33d2\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-08-04T08:08:36.412+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>Patient: Fhirman, Sam</p>\r\n</div></text><identifier><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"NI\" /><display value=\"National unique individual identifier\" /></coding><text value=\"IHI\" /></type><system value=\"http://ns.electronichealth.net.au/id/hi/ihi/1.0\" /><value value=\"8003608166690503\" /></identifier><identifier><use value=\"usual\" /><type><coding><system value=\"http://hl7.org/fhir/v2/0203\" /><code value=\"MR\" /></coding></type><system value=\"urn:oid:1.2.36.146.595.217.0.1\" /><value value=\"6666\" /><period><start value=\"2001-05-06\" /></period><assigner><display value=\"Acme Healthcare\" /></assigner></identifier><name><use value=\"official\" /><text value=\"Sam Fhirman\" /><family value=\"Fhirman\" /><given value=\"Sam\" /><prefix value=\"Mr\" /></name><telecom><system value=\"phone\" /><value value=\"+61481059995\" /><use value=\"mobile\" /></telecom><gender value=\"male\" /><birthDate value=\"1973-09-30\" /><address><use value=\"work\" /><line value=\"400 George Street\" /><city value=\"Brisbane\" /><state value=\"QLD\" /><postalCode value=\"4000\" /><country value=\"AUS\" /></address><maritalStatus><coding><system value=\"http://hl7.org/fhir/v3/MaritalStatus\" /><code value=\"M\" /><display value=\"Married\" /></coding></maritalStatus></Patient></resource><search><mode value=\"match\" /></search></entry></Bundle>"
+						}
+					]
+				},
+				{
+					"name": "Extended Search",
+					"request": {
+						"url": {
+							"raw": "https://{{ServerAddress}}/Patient?identifier=http://ns.electronichealth.net.au/id/hi/ihi/1.0|8003608166690503",
+							"protocol": "https",
+							"host": [
+								"{{ServerAddress}}"
+							],
+							"path": [
+								"Patient"
+							],
+							"query": [
+								{
+									"key": "identifier",
+									"value": "http://ns.electronichealth.net.au/id/hi/ihi/1.0|8003608166690503",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "{{ContentType}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "a9161241-7ff7-4500-b02c-b3fca74ef88c",
+							"name": "Extended Search - active 5a088384-a9d2-45db-89a9-eaafeb54b6a5",
+							"originalRequest": {
+								"url": {
+									"raw": "https://{{ServerAddress}}/Patient?active=  03f0b0d0-368e-4c91-9396-217975354796",
+									"protocol": "https",
+									"host": [
+										"{{ServerAddress}}"
+									],
+									"path": [
+										"Patient"
+									],
+									"query": [
+										{
+											"key": "active",
+											"value": "  03f0b0d0-368e-4c91-9396-217975354796",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{Accept}}",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{ContentType}}",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "content-length",
+									"key": "content-length",
+									"value": "542",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/fhir+xml; charset=utf-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Fri, 20 Oct 2017 12:24:38 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "server",
+									"key": "server",
+									"value": "Microsoft-IIS/8.5",
+									"description": "A name for the server"
+								},
+								{
+									"name": "x-powered-by",
+									"key": "x-powered-by",
+									"value": "ASP.NET",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"responseTime": 3256,
+							"body": "<Bundle xmlns=\"http://hl7.org/fhir\"><type value=\"searchset\" /><total value=\"0\" /><link><relation value=\"first\" /><url value=\"https://pyrohealth.net/test/stu3/fhir/Patient?active=5a088384-a9d2-45db-89a9-eaafeb54b6a5&amp;page=1\" /></link><link><relation value=\"last\" /><url value=\"https://pyrohealth.net/test/stu3/fhir/Patient?active=5a088384-a9d2-45db-89a9-eaafeb54b6a5&amp;page=1\" /></link><link><relation value=\"self\" /><url value=\"https://pyrohealth.net/test/stu3/fhir/Patient?active=5a088384-a9d2-45db-89a9-eaafeb54b6a5\" /></link></Bundle>"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Patient with References",
+			"description": "",
+			"item": [
+				{
+					"name": "Find Patient",
+					"request": {
+						"url": "https://{{ServerAddress}}/Patient/7ed73a87-0c81-427e-9668-e437eb9c18c3",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Search Resource By Reference",
+					"request": {
+						"url": {
+							"raw": "https://{{ServerAddress}}/Encounter?patient=Patient/7ed73a87-0c81-427e-9668-e437eb9c18c3",
+							"protocol": "https",
+							"host": [
+								"{{ServerAddress}}"
+							],
+							"path": [
+								"Encounter"
+							],
+							"query": [
+								{
+									"key": "patient",
+									"value": "Patient/7ed73a87-0c81-427e-9668-e437eb9c18c3",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "4b20b0a3-73a2-408c-a1a3-43ee7f8649c9",
+							"name": "Search Resource By Reference",
+							"originalRequest": {
+								"url": {
+									"raw": "https://{{ServerAddress}}/Encounter?patient=Patient/7ed73a87-0c81-427e-9668-e437eb9c18c3",
+									"protocol": "https",
+									"host": [
+										"{{ServerAddress}}"
+									],
+									"path": [
+										"Encounter"
+									],
+									"query": [
+										{
+											"key": "patient",
+											"value": "Patient/7ed73a87-0c81-427e-9668-e437eb9c18c3",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{Accept}}",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "content-length",
+									"key": "content-length",
+									"value": "5188",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/fhir+xml; charset=utf-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Mon, 23 Oct 2017 10:06:35 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "server",
+									"key": "server",
+									"value": "Microsoft-IIS/8.5",
+									"description": "A name for the server"
+								},
+								{
+									"name": "x-powered-by",
+									"key": "x-powered-by",
+									"value": "ASP.NET",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [],
+							"responseTime": 455,
+							"body": "<Bundle xmlns=\"http://hl7.org/fhir\"><type value=\"searchset\" /><total value=\"1\" /><link><relation value=\"first\" /><url value=\"https://pyrohealth.net/test/stu3/fhir/Encounter?patient=Patient/7ed73a87-0c81-427e-9668-e437eb9c18c3&amp;page=1\" /></link><link><relation value=\"last\" /><url value=\"https://pyrohealth.net/test/stu3/fhir/Encounter?patient=Patient/7ed73a87-0c81-427e-9668-e437eb9c18c3&amp;page=1\" /></link><link><relation value=\"self\" /><url value=\"https://pyrohealth.net/test/stu3/fhir/Encounter?patient=Patient/7ed73a87-0c81-427e-9668-e437eb9c18c3\" /></link><entry><fullUrl value=\"https://pyrohealth.net/test/stu3/fhir/Encounter/afa04852-3c92-4c75-b091-c582842b1fbb\" /><resource><Encounter><id value=\"afa04852-3c92-4c75-b091-c582842b1fbb\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-10-23T09:31:01.543+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p xmlns=\"\">\r\n    <b>Generated Narrative with Details</b>\r\n  </p>\r\n  <p xmlns=\"\">\r\n    <b>id</b>: digitalhealth-f001</p>\r\n  <p xmlns=\"\">\r\n    <b>identifier</b>: v1451 (OFFICIAL)</p>\r\n  <p xmlns=\"\">\r\n    <b>status</b>: finished</p>\r\n  <p xmlns=\"\">\r\n    <b>class</b>: outpatient</p>\r\n  <p xmlns=\"\">\r\n    <b>type</b>: Patient-initiated encounter <span>(Details : {SNOMED CT code '270427003' = 'Patient-initiated encounter (procedure)', given as 'Patient-initiated encounter'})</span></p>\r\n  <p xmlns=\"\">\r\n    <b>priority</b>: Non-urgent cardiological admission <span>(Details : {SNOMED CT code '310361003' = 'Non-urgent cardiological admission (procedure)', given as 'Non-urgent cardiological admission'})</span></p>\r\n  <p xmlns=\"\">\r\n    <b>patient</b>: <a>P. van de Heuvel</a></p>\r\n  <h3 xmlns=\"\">Participants</h3>\r\n  <table xmlns=\"\">\r\n    <tr>\r\n      <td>-</td>\r\n      <td>\r\n        <b>Individual</b>\r\n      </td>\r\n    </tr>\r\n    <tr>\r\n      <td>*</td>\r\n      <td>\r\n        <a>P. Voigt</a>\r\n      </td>\r\n    </tr>\r\n  </table>\r\n  <p xmlns=\"\">\r\n    <b>length</b>: 140 min<span> (Details: http://unitsofmeasure.org code min = 'min')</span></p>\r\n  <p xmlns=\"\">\r\n    <b>reason</b>: Heart valve replacement <span>(Details : {SNOMED CT code '34068001' = 'Heart valve replacement (procedure)', given as 'Heart valve replacement'})</span></p>\r\n  <h3 xmlns=\"\">Hospitalizations</h3>\r\n  <table xmlns=\"\">\r\n    <tr>\r\n      <td>-</td>\r\n      <td>\r\n        <b>PreAdmissionIdentifier</b>\r\n      </td>\r\n      <td>\r\n        <b>AdmitSource</b>\r\n      </td>\r\n      <td>\r\n        <b>DischargeDisposition</b>\r\n      </td>\r\n    </tr>\r\n    <tr>\r\n      <td>*</td>\r\n      <td>93042 (OFFICIAL)</td>\r\n      <td>Referral by physician <span>(Details : {SNOMED CT code '305956004' = 'Referral by physician (procedure)', given as 'Referral by physician'})</span></td>\r\n      <td>Discharge to home <span>(Details : {SNOMED CT code '306689006' = 'Discharge to home (procedure)', given as 'Discharge to home'})</span></td>\r\n    </tr>\r\n  </table>\r\n  <p xmlns=\"\">\r\n    <b>serviceProvider</b>: <a>Burgers University Medical Center</a></p>\r\n</div></text><identifier><use value=\"official\" /><system value=\"http://www.amc.nl/zorgportal/identifiers/visits\" /><value value=\"v1451\" /></identifier><status value=\"finished\" /><class><code value=\"SS\" /><display value=\"short stay\" /></class><type><coding><system value=\"http://snomed.info/sct\" /><code value=\"270427003\" /><display value=\"Patient-initiated encounter\" /></coding></type><priority><coding><system value=\"http://snomed.info/sct\" /><code value=\"310361003\" /><display value=\"Non-urgent cardiological admission\" /></coding></priority><subject><reference value=\"Patient/7ed73a87-0c81-427e-9668-e437eb9c18c3\" /><display value=\"P. van de Heuvel\" /></subject><length><value value=\"140\" /><unit value=\"min\" /><system value=\"http://unitsofmeasure.org\" /><code value=\"min\" /></length><reason><coding><system value=\"http://snomed.info/sct\" /><code value=\"34068001\" /><display value=\"Heart valve replacement\" /></coding></reason><hospitalization><preAdmissionIdentifier><use value=\"official\" /><system value=\"http://www.amc.nl/zorgportal/identifiers/pre-admissions\" /><value value=\"93042\" /></preAdmissionIdentifier><admitSource><fhir_comments value=\"        &lt;preAdmissionTest&gt;&#xA;            &lt;coding&gt;&#xA;                &lt;system value=&quot;http://snomed.info/sct&quot;/&gt;&#xA;                &lt;code value=&quot;164847006&quot;/&gt;&#xA;                &lt;display value=&quot;Standard ECG&quot;/&gt;&#xA;            &lt;/coding&gt;&#xA;            &lt;coding&gt;&#xA;                &lt;system value=&quot;http://snomed.info/sct&quot;/&gt;&#xA;                &lt;code value=&quot;396550006&quot;/&gt;&#xA;                &lt;display value=&quot;Blood test&quot;/&gt;&#xA;            &lt;/coding&gt;&#xA;        &lt;/preAdmissionTest&gt;   \" /><coding><system value=\"http://snomed.info/sct\" /><code value=\"305956004\" /><display value=\"Referral by physician\" /></coding></admitSource><dischargeDisposition><coding><system value=\"http://snomed.info/sct\" /><code value=\"306689006\" /><display value=\"Discharge to home\" /></coding></dischargeDisposition></hospitalization></Encounter></resource><search><mode value=\"match\" /></search></entry></Bundle>"
+						}
+					]
+				},
+				{
+					"name": "Observe Contained Resource References",
+					"request": {
+						"url": "https://{{ServerAddress}}/ProcedureRequest/ba696635-1bc0-4f3b-947e-26e726da0fbb",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ValueSet & CodeSystem",
+			"description": "",
+			"item": [
+				{
+					"name": "Get ValueSet",
+					"request": {
+						"url": "https://sqlonfhir-stu3.azurewebsites.net/fhir/ValueSet/62c5a2cef41a4950a0b9248e45f087b8/$expand",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "{{Content-Type}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "3768dd9e-769d-4a1f-bf25-4a48dbf8acef",
+							"name": "Get ValueSet - without expand",
+							"originalRequest": {
+								"url": "https://sqlonfhir-stu3.azurewebsites.net/fhir/ValueSet/62c5a2cef41a4950a0b9248e45f087b8",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{Accept}}",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{Content-Type}}",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "private",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-length",
+									"key": "content-length",
+									"value": "1656",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"name": "content-location",
+									"key": "content-location",
+									"value": "https://sqlonfhir-stu3.azurewebsites.net/fhir/ValueSet/62c5a2cef41a4950a0b9248e45f087b8/_history/1",
+									"description": "An alternate location for the returned data"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/fhir+xml; charset=utf-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Wed, 25 Oct 2017 07:39:37 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "etag",
+									"key": "etag",
+									"value": "\"1\"",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"name": "last-modified",
+									"key": "last-modified",
+									"value": "Wed, 25 Oct 2017 07:29:49 GMT",
+									"description": "The last modified date for the requested object, in RFC 2822 format"
+								},
+								{
+									"name": "location",
+									"key": "location",
+									"value": "https://sqlonfhir-stu3.azurewebsites.net/fhir/ValueSet/62c5a2cef41a4950a0b9248e45f087b8/_history/1",
+									"description": "Used in redirection, or when a new resource has been created."
+								},
+								{
+									"name": "request-context",
+									"key": "request-context",
+									"value": "appId=cid-v1:db89bf18-68ce-4c00-a208-3700054b56ad",
+									"description": "Custom header"
+								},
+								{
+									"name": "server",
+									"key": "server",
+									"value": "Microsoft-IIS/8.0",
+									"description": "A name for the server"
+								},
+								{
+									"name": "x-aspnet-version",
+									"key": "x-aspnet-version",
+									"value": "4.0.30319",
+									"description": "Custom header"
+								},
+								{
+									"name": "x-powered-by",
+									"key": "x-powered-by",
+									"value": "ASP.NET",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"hostOnly": false,
+									"httpOnly": true,
+									"domain": ".sqlonfhir-stu3.azurewebsites.net",
+									"path": "/",
+									"secure": false,
+									"session": true,
+									"value": "c353b84f8b6b11d01987f35c980a01be8d8a78a78999a98f53aa2046c4a069cf",
+									"key": "ARRAffinity"
+								}
+							],
+							"responseTime": 1446,
+							"body": "<ValueSet xmlns=\"http://hl7.org/fhir\"><id value=\"62c5a2cef41a4950a0b9248e45f087b8\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-10-25T07:29:49.289+00:00\" /></meta><text><status value=\"additional\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <p>ValueSet for FHIR tutorial participants to rate the difficulty of understanding of the training material</p>\r\n  <p>Developed by: Australian Digital Health Agency Connectathon team (example)</p>\r\n  <p>Published for testing on 27-June 2016</p>\r\n  <table>\r\n    <tr>\r\n      <td>\r\n        <b>Code</b>\r\n      </td>\r\n      <td>\r\n        <b>Display</b>\r\n      </td>\r\n    </tr>\r\n    <tr>\r\n      <td>easy</td>\r\n      <td>I found the material easy to understand</td>\r\n    </tr>\r\n    <tr>\r\n      <td>hard</td>\r\n      <td>I found the material hard to understand</td>\r\n    </tr>\r\n  </table>\r\n</div></text><url value=\"urn:uuid:8ec3847e-789e-4994-a74b-7bbf55d88190\" /><version value=\"20160530\" /><name value=\"FHIR tutorial difficulty levels\" /><status value=\"draft\" /><experimental value=\"true\" /><date value=\"2016-06-27\" /><publisher value=\"Australian Digital Health Agency\" /><contact><name value=\"Angus Millar\" /><telecom><system value=\"email\" /><value value=\"angus.millar@digitalhealth.gov.au\" /></telecom></contact><description value=\"Codes for FHIR tutorial participants to rate the difficulty of understanding of the training material\" /><compose><lockedDate value=\"2016-06-27\" /><include><system value=\"http://fhir3.healthintersections.com.au/open/CodeSystem/5\" /><version value=\"20162726\" /><concept><code value=\"easy\" /></concept><concept><code value=\"hard\" /></concept></include></compose></ValueSet>"
+						},
+						{
+							"id": "d7673699-bfdc-4773-af73-33b3091823b9",
+							"name": "Get ValueSet - expand",
+							"originalRequest": {
+								"url": "https://sqlonfhir-stu3.azurewebsites.net/fhir/ValueSet/62c5a2cef41a4950a0b9248e45f087b8/$expand",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{Accept}}",
+										"description": "",
+										"warning": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "{{Content-Type}}",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "private",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-length",
+									"key": "content-length",
+									"value": "915",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"name": "content-location",
+									"key": "content-location",
+									"value": "https://sqlonfhir-stu3.azurewebsites.net/fhir/ValueSet/62c5a2cef41a4950a0b9248e45f087b8/_history/1",
+									"description": "An alternate location for the returned data"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/fhir+xml; charset=utf-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Wed, 25 Oct 2017 07:40:37 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "etag",
+									"key": "etag",
+									"value": "\"1\"",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"name": "last-modified",
+									"key": "last-modified",
+									"value": "Wed, 25 Oct 2017 07:29:49 GMT",
+									"description": "The last modified date for the requested object, in RFC 2822 format"
+								},
+								{
+									"name": "location",
+									"key": "location",
+									"value": "https://sqlonfhir-stu3.azurewebsites.net/fhir/ValueSet/62c5a2cef41a4950a0b9248e45f087b8/_history/1",
+									"description": "Used in redirection, or when a new resource has been created."
+								},
+								{
+									"name": "request-context",
+									"key": "request-context",
+									"value": "appId=cid-v1:db89bf18-68ce-4c00-a208-3700054b56ad",
+									"description": "Custom header"
+								},
+								{
+									"name": "server",
+									"key": "server",
+									"value": "Microsoft-IIS/8.0",
+									"description": "A name for the server"
+								},
+								{
+									"name": "x-aspnet-version",
+									"key": "x-aspnet-version",
+									"value": "4.0.30319",
+									"description": "Custom header"
+								},
+								{
+									"name": "x-powered-by",
+									"key": "x-powered-by",
+									"value": "ASP.NET",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"hostOnly": false,
+									"httpOnly": true,
+									"domain": ".sqlonfhir-stu3.azurewebsites.net",
+									"path": "/",
+									"secure": false,
+									"session": true,
+									"value": "c353b84f8b6b11d01987f35c980a01be8d8a78a78999a98f53aa2046c4a069cf",
+									"key": "ARRAffinity"
+								}
+							],
+							"responseTime": 1634,
+							"body": "<ValueSet xmlns=\"http://hl7.org/fhir\"><id value=\"62c5a2cef41a4950a0b9248e45f087b8\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-10-25T07:29:49.29+00:00\" /></meta><text><status value=\"additional\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">Expansion of [FHIR tutorial difficulty levels] where filter = '%' (count=2 of 2)</div></text><url value=\"urn:uuid:8ec3847e-789e-4994-a74b-7bbf55d88190\" /><version value=\"20160530\" /><name value=\"FHIR tutorial difficulty levels\" /><status value=\"draft\" /><date value=\"2016-06-27\" /><publisher value=\"Australian Digital Health Agency\" /><contact><name value=\"Angus Millar\" /><telecom><system value=\"email\" /><value value=\"angus.millar@digitalhealth.gov.au\" /></telecom></contact><expansion><total value=\"2\" /><contains><code value=\"easy\" /><display value=\"easy\" /></contains><contains><code value=\"hard\" /><display value=\"hard\" /></contains></expansion></ValueSet>"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "ConceptMap",
+			"description": "",
+			"item": [
+				{
+					"name": "Get ConceptMap",
+					"request": {
+						"url": "https://sqlonfhir-stu3.azurewebsites.net/fhir/ConceptMap/8b4356488c4c49a4af8ec65c15c77449",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "ef08a5fb-482e-446f-a5f6-05a1dafc1427",
+							"name": "Get ConceptMap",
+							"originalRequest": {
+								"url": "https://sqlonfhir-stu3.azurewebsites.net/fhir/ConceptMap/8b4356488c4c49a4af8ec65c15c77449",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "{{Accept}}",
+										"description": "",
+										"warning": ""
+									}
+								],
+								"body": {}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "xml",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "private",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "content-length",
+									"key": "content-length",
+									"value": "2649",
+									"description": "The length of the response body in octets (8-bit bytes)"
+								},
+								{
+									"name": "content-location",
+									"key": "content-location",
+									"value": "https://sqlonfhir-stu3.azurewebsites.net/fhir/ConceptMap/8b4356488c4c49a4af8ec65c15c77449/_history/1",
+									"description": "An alternate location for the returned data"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/fhir+xml; charset=utf-8",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Wed, 25 Oct 2017 07:51:26 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "etag",
+									"key": "etag",
+									"value": "\"1\"",
+									"description": "An identifier for a specific version of a resource, often a message digest"
+								},
+								{
+									"name": "last-modified",
+									"key": "last-modified",
+									"value": "Wed, 25 Oct 2017 07:50:19 GMT",
+									"description": "The last modified date for the requested object, in RFC 2822 format"
+								},
+								{
+									"name": "location",
+									"key": "location",
+									"value": "https://sqlonfhir-stu3.azurewebsites.net/fhir/ConceptMap/8b4356488c4c49a4af8ec65c15c77449/_history/1",
+									"description": "Used in redirection, or when a new resource has been created."
+								},
+								{
+									"name": "request-context",
+									"key": "request-context",
+									"value": "appId=cid-v1:db89bf18-68ce-4c00-a208-3700054b56ad",
+									"description": "Custom header"
+								},
+								{
+									"name": "server",
+									"key": "server",
+									"value": "Microsoft-IIS/8.0",
+									"description": "A name for the server"
+								},
+								{
+									"name": "x-aspnet-version",
+									"key": "x-aspnet-version",
+									"value": "4.0.30319",
+									"description": "Custom header"
+								},
+								{
+									"name": "x-powered-by",
+									"key": "x-powered-by",
+									"value": "ASP.NET",
+									"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"hostOnly": false,
+									"httpOnly": true,
+									"domain": ".sqlonfhir-stu3.azurewebsites.net",
+									"path": "/",
+									"secure": false,
+									"session": true,
+									"value": "c353b84f8b6b11d01987f35c980a01be8d8a78a78999a98f53aa2046c4a069cf",
+									"key": "ARRAffinity"
+								}
+							],
+							"responseTime": 272,
+							"body": "<ConceptMap xmlns=\"http://hl7.org/fhir\"><id value=\"8b4356488c4c49a4af8ec65c15c77449\" /><meta><versionId value=\"1\" /><lastUpdated value=\"2017-10-25T07:50:19.035+00:00\" /></meta><text><status value=\"generated\" /><div xmlns=\"http://www.w3.org/1999/xhtml\">\r\n  <b>New system valueset to current valueset mapping</b> 2016-06-27\r\n\t<hr /><p>A mapping between the example new system valueset to the current valueset</p><br /><span style=\"color: gray;\">publisher:</span> Australian Digital Health Agency<br /><span style=\"color: gray;\">build date:</span> 2016-06-27<br /><span style=\"color: gray;\">source:</span> urn:uuid:5b2b9bb0-f459-4fcd-80f7-076969d0667d<br /><span style=\"color: gray;\">target:</span> urn:uuid:a5f94e22-ddba-474e-80e3-b067d9c27a55\r\n</div></text><url value=\"urn:uuid:193bb9e9-f402-4ea6-95d0-47f8bdd51f68\" /><version value=\"2016-06-27\" /><name value=\"New system valueset to current valueset mapping\" /><status value=\"draft\" /><experimental value=\"true\" /><date value=\"2016-06-27\" /><publisher value=\"Australian Digital Health Agency\" /><contact><name value=\"Vadim Peretokin\" /><telecom><system value=\"email\" /><value value=\"vadim.peretokin@digitalhealth.gov.au\" /><use value=\"work\" /></telecom></contact><description value=\"A mapping between the example new system valueset to the current valueset\" /><purpose value=\"Sample supporting material for the ConceptMap tutorial at https://fhir-drills.github.io\" /><copyright value=\"Creative Commons 0\" /><sourceUri value=\"urn:uuid:5b2b9bb0-f459-4fcd-80f7-076969d0667d\" /><targetUri value=\"urn:uuid:a5f94e22-ddba-474e-80e3-b067d9c27a55\" /><group><source value=\"urn:uuid:bb6efb79-2b93-4569-a51e-6fcf103b6e9a\" /><element><code value=\"in-office\" /><target><code value=\"present\" /><equivalence value=\"equal\" /></target></element><element><code value=\"away-travelling\" /><target><code value=\"not-present\" /><equivalence value=\"wider\" /></target></element><element><code value=\"working-from-home\" /><target><code value=\"not-present\" /><equivalence value=\"wider\" /></target></element><element><code value=\"annual-leave\" /><target><code value=\"not-present\" /><equivalence value=\"wider\" /></target></element><element><code value=\"personal-leave\" /><target><code value=\"sick\" /><equivalence value=\"equal\" /></target></element><element><code value=\"jury-duty\" /><target><code value=\"not-present\" /><equivalence value=\"wider\" /></target></element><element><code value=\"away-travelling\" /><target><code value=\"present\" /><equivalence value=\"disjoint\" /><comment value=\"An example mapping demonstrating how you can explicitly show that two concepts are not related\" /></target></element></group></ConceptMap>"
+						}
+					]
+				},
+				{
+					"name": "Get ConceptMap - translate",
+					"request": {
+						"url": {
+							"raw": "https://ontoserver.csiro.au/stu3-latest/ConceptMap/a912ee54-30e8-4a1a-8f2a-1a4337aaf69c/$translate?code=in-office&system=urn:uuid:bb6efb79-2b93-4569-a51e-6fcf103b6e9a&target=urn:uuid:a5f94e22-ddba-474e-80e3-b067d9c27a55",
+							"protocol": "https",
+							"host": [
+								"ontoserver",
+								"csiro",
+								"au"
+							],
+							"path": [
+								"stu3-latest",
+								"ConceptMap",
+								"a912ee54-30e8-4a1a-8f2a-1a4337aaf69c",
+								"$translate"
+							],
+							"query": [
+								{
+									"key": "code",
+									"value": "in-office",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "system",
+									"value": "urn:uuid:bb6efb79-2b93-4569-a51e-6fcf103b6e9a",
+									"equals": true,
+									"description": ""
+								},
+								{
+									"key": "target",
+									"value": "urn:uuid:a5f94e22-ddba-474e-80e3-b067d9c27a55",
+									"equals": true,
+									"description": ""
+								}
+							],
+							"variable": []
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

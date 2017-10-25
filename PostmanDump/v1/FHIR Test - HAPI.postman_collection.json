@@ -1,0 +1,698 @@
+{
+	"variables": [],
+	"info": {
+		"name": "FHIR Test - HAPI",
+		"_postman_id": "8723030f-2b08-d725-c9fd-6935cda3401e",
+		"description": "Testing the on HAPI server - https://fhirtest.uhn.ca/baseDstu3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Patient - 32754",
+			"request": {
+				"url": "{{ServerAddress}}/Patient/269582",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "8462336e-0e78-45e6-b023-ee0f6f8f31da",
+					"name": "Get Patient - 32754",
+					"originalRequest": {
+						"url": "{{ServerAddress}}/Patient/32754",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"description": "",
+								"warning": ""
+							}
+						],
+						"body": {}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "xml",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-encoding",
+							"key": "content-encoding",
+							"value": "gzip",
+							"description": "The type of encoding used on the data."
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/fhir+xml;charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Tue, 24 Oct 2017 09:26:32 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "location",
+							"key": "location",
+							"value": "http://fhirtest.uhn.ca/baseDstu3/Patient/32754/_history/21",
+							"description": "Used in redirection, or when a new resource has been created."
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "nginx/1.10.3 (Ubuntu)",
+							"description": "A name for the server"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "vary",
+							"key": "vary",
+							"value": "Accept-Encoding",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "HAPI FHIR 3.1.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.0.1/DSTU3)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 1945,
+					"body": "<Patient xmlns=\"http://hl7.org/fhir\">\n   <id value=\"32754\"/>\n   <meta>\n      <versionId value=\"21\"/>\n      <lastUpdated value=\"2017-10-23T22:53:34.607-04:00\"/>\n      <tag>\n         <system value=\"http://example.org/codes/tags\"/>\n         <code value=\"entered-by-hand-99\"/>\n         <display value=\"Patient file entered by hand ii\"/>\n      </tag>\n      <tag>\n         <system value=\"http://projectcrucible.org\"/>\n         <code value=\"testdata\"/>\n      </tag>\n      <tag>\n         <system value=\"http://example.org/codes/tags\"/>\n         <code value=\"profile value\"/>\n         <display value=\"http://training.example.org/StructureDefinition/training-exercise-profile\"/>\n      </tag>\n      <tag>\n         <system value=\"http://example.org/codes/tags/done2\"/>\n         <code value=\"entered-by-hand\"/>\n         <display value=\"Patient File entered by hand\"/>\n      </tag>\n      <tag>\n         <system value=\"http://example.org/codes/tags/done\"/>\n         <code value=\"entered-by-hand\"/>\n         <display value=\"Patient File entered by hand\"/>\n      </tag>\n      <tag>\n         <system value=\"http://example.org/codes/tags\"/>\n         <code value=\"testTag\"/>\n         <display value=\"Patient file entered by hand\"/>\n      </tag>\n      <tag>\n         <system value=\"http://example.org/codes/tags\"/>\n         <code value=\"entered-by-hand\"/>\n         <display value=\"Patient File entered by hand\"/>\n      </tag>\n   </meta>\n   <language value=\"sv\"/>\n   <text>\n      <status value=\"generated\"/>\n      <div xmlns=\"http://www.w3.org/1999/xhtml\"> \n         <table class=\"hapiPropertyTable\"> \n            <tbody/> \n         </table> \n      </div>\n   </text>\n   <active value=\"true\"/>\n   <name>\n      <family value=\"Kramer\"/>\n      <given value=\"Ewout\"/>\n   </name>\n   <name>\n      <family value=\"Kramer\"/>\n      <given value=\"Ewout\"/>\n   </name>\n   <gender value=\"female\"/>\n   <birthDate value=\"2017-10-22\"/>\n   <deceasedBoolean value=\"false\"/>\n   <maritalStatus>\n      <coding>\n         <system value=\"http://hl7.org/fhir/v3/MaritalStatus\"/>\n         <code value=\"S\"/>\n      </coding>\n   </maritalStatus>\n   <multipleBirthInteger value=\"24\"/>\n</Patient>"
+				}
+			]
+		},
+		{
+			"name": "Get Patient - 32754 $everything",
+			"request": {
+				"url": "{{ServerAddress}}/Patient/269582/$everything",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Patient",
+			"request": {
+				"url": "{{ServerAddress}}/Patient",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "{{Content-Type}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<Patient xmlns=\"http://hl7.org/fhir\">\r\n    <name>\r\n        <use value=\"official\" />\r\n        <text value=\"John Doe\" />\r\n        <family value=\"Doe\" />\r\n        <given value=\"John\" />\r\n        <prefix value=\"Mr\" />\r\n    </name>\r\n    <telecom>\r\n        <system value=\"phone\" />\r\n        <value value=\"+61481059995\" />\r\n        <use value=\"mobile\" />\r\n    </telecom>\r\n    <gender value=\"male\" />\r\n    <birthDate value=\"1973-09-30\" />\r\n    <address>\r\n        <use value=\"work\" />\r\n        <line value=\"400 George Street\" />\r\n        <city value=\"Brisbane\" />\r\n        <state value=\"QLD\" />\r\n        <postalCode value=\"4000\" />\r\n        <country value=\"AUS\" />\r\n    </address>\r\n    <maritalStatus>\r\n        <coding>\r\n            <system value=\"http://hl7.org/fhir/v3/MaritalStatus\" />\r\n            <code value=\"M\" />\r\n            <display value=\"Married\" />\r\n        </coding>\r\n    </maritalStatus>\r\n</Patient>"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "ba80fc0c-51bb-4f96-844a-4ef9bd685dac",
+					"name": "Create Patient - Patient/269487/_history/1&quot;",
+					"originalRequest": {
+						"url": "{{ServerAddress}}/Patient",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"description": "",
+								"warning": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "{{Content-Type}}",
+								"description": "",
+								"warning": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<Patient xmlns=\"http://hl7.org/fhir\">\r\n    <name>\r\n        <use value=\"official\" />\r\n        <text value=\"John Doe\" />\r\n        <family value=\"Doe\" />\r\n        <given value=\"John\" />\r\n        <prefix value=\"Mr\" />\r\n    </name>\r\n    <telecom>\r\n        <system value=\"phone\" />\r\n        <value value=\"+61481059995\" />\r\n        <use value=\"mobile\" />\r\n    </telecom>\r\n    <gender value=\"male\" />\r\n    <birthDate value=\"1973-09-30\" />\r\n    <address>\r\n        <use value=\"work\" />\r\n        <line value=\"400 George Street\" />\r\n        <city value=\"Brisbane\" />\r\n        <state value=\"QLD\" />\r\n        <postalCode value=\"4000\" />\r\n        <country value=\"AUS\" />\r\n    </address>\r\n    <maritalStatus>\r\n        <coding>\r\n            <system value=\"http://hl7.org/fhir/v3/MaritalStatus\" />\r\n            <code value=\"M\" />\r\n            <display value=\"Married\" />\r\n        </coding>\r\n    </maritalStatus>\r\n</Patient>"
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "xml",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "access-control-expose-headers",
+							"key": "access-control-expose-headers",
+							"value": "Location, Content-Location",
+							"description": "Lets a server whitelist headers that browsers are allowed to access."
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/fhir+xml;charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Tue, 24 Oct 2017 09:43:29 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "location",
+							"key": "location",
+							"value": "http://fhirtest.uhn.ca/baseDstu3/Patient/269487/_history/1",
+							"description": "Used in redirection, or when a new resource has been created."
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "nginx/1.10.3 (Ubuntu)",
+							"description": "A name for the server"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "vary",
+							"key": "vary",
+							"value": "Origin",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "x-fhir-request-validation",
+							"key": "x-fhir-request-validation",
+							"value": "{\"resourceType\":\"OperationOutcome\",\"text\":{\"status\":\"generated\",\"div\":\"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><h1>Operation Outcome</h1><table border=\\\"0\\\"><tr><td style=\\\"font-weight: bold;\\\"...",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "HAPI FHIR 3.1.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.0.1/DSTU3)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 2407,
+					"body": "<OperationOutcome xmlns=\"http://hl7.org/fhir\">\n   <text>\n      <status value=\"generated\"/>\n      <div xmlns=\"http://www.w3.org/1999/xhtml\">\n         <h1>Operation Outcome</h1>\n         <table border=\"0\">\n            <tr>\n               <td style=\"font-weight: bold;\">INFORMATION</td>\n               <td>[]</td>\n               <td>\n                  <pre>Successfully created resource &quot;Patient/269487/_history/1&quot; in 2ms</pre>\n               </td> \n            </tr> \n            <tr> \n               <td style=\"font-weight: bold;\">INFORMATION</td> \n               <td>[]</td> \n               <td>\n                  <pre>No issues detected during validation</pre>\n               </td> \n            </tr> \n         </table> \n      </div>\n   </text>\n   <issue>\n      <severity value=\"information\"/>\n      <code value=\"informational\"/>\n      <diagnostics value=\"Successfully created resource &quot;Patient/269487/_history/1&quot; in 2ms\"/>\n   </issue>\n   <issue>\n      <severity value=\"information\"/>\n      <code value=\"informational\"/>\n      <diagnostics value=\"No issues detected during validation\"/>\n   </issue>\n</OperationOutcome>"
+				},
+				{
+					"id": "0030897b-4c93-430a-912c-a78fe173f43b",
+					"name": "Create Patient - Empty",
+					"originalRequest": {
+						"url": "{{ServerAddress}}/Patient",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"description": "",
+								"warning": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "{{Content-Type}}",
+								"description": "",
+								"warning": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<Patient xmlns=\"http://hl7.org/fhir\">\r\n</Patient>"
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "xml",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "access-control-expose-headers",
+							"key": "access-control-expose-headers",
+							"value": "Location, Content-Location",
+							"description": "Lets a server whitelist headers that browsers are allowed to access."
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/fhir+xml;charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Tue, 24 Oct 2017 09:57:37 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "location",
+							"key": "location",
+							"value": "http://fhirtest.uhn.ca/baseDstu3/Patient/269495/_history/1",
+							"description": "Used in redirection, or when a new resource has been created."
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "nginx/1.10.3 (Ubuntu)",
+							"description": "A name for the server"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "vary",
+							"key": "vary",
+							"value": "Origin",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "x-fhir-request-validation",
+							"key": "x-fhir-request-validation",
+							"value": "{\"resourceType\":\"OperationOutcome\",\"text\":{\"status\":\"generated\",\"div\":\"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><h1>Operation Outcome</h1><table border=\\\"0\\\"><tr><td style=\\\"font-weight: bold;\\\"...",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "HAPI FHIR 3.1.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.0.1/DSTU3)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 2579,
+					"body": "<OperationOutcome xmlns=\"http://hl7.org/fhir\">\n   <text>\n      <status value=\"generated\"/>\n      <div xmlns=\"http://www.w3.org/1999/xhtml\">\n         <h1>Operation Outcome</h1>\n         <table border=\"0\">\n            <tr>\n               <td style=\"font-weight: bold;\">INFORMATION</td>\n               <td>[]</td>\n               <td>\n                  <pre>Successfully created resource &quot;Patient/269495/_history/1&quot; in 2ms</pre>\n               </td> \n            </tr> \n            <tr> \n               <td style=\"font-weight: bold;\">ERROR</td> \n               <td>[/f:Patient]</td> \n               <td>\n                  <pre>Element must have some content</pre>\n               </td> \n            </tr> \n         </table> \n      </div>\n   </text>\n   <issue>\n      <severity value=\"information\"/>\n      <code value=\"informational\"/>\n      <diagnostics value=\"Successfully created resource &quot;Patient/269495/_history/1&quot; in 2ms\"/>\n   </issue>\n   <issue>\n      <severity value=\"error\"/>\n      <code value=\"processing\"/>\n      <diagnostics value=\"Element must have some content\"/>\n      <location value=\"/f:Patient\"/>\n   </issue>\n</OperationOutcome>"
+				}
+			]
+		},
+		{
+			"name": "Create Condition",
+			"request": {
+				"url": "{{ServerAddress}}/Condition",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "{{Content-Type}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<Patient xmlns=\"http://hl7.org/fhir\">\r\n    <name>\r\n        <use value=\"official\" />\r\n        <text value=\"John Doe\" />\r\n        <family value=\"Doe\" />\r\n        <given value=\"John\" />\r\n        <prefix value=\"Mr\" />\r\n    </name>\r\n    <telecom>\r\n        <system value=\"phone\" />\r\n        <value value=\"+61481059995\" />\r\n        <use value=\"mobile\" />\r\n    </telecom>\r\n    <gender value=\"male\" />\r\n    <birthDate value=\"1973-09-30\" />\r\n    <address>\r\n        <use value=\"work\" />\r\n        <line value=\"400 George Street\" />\r\n        <city value=\"Brisbane\" />\r\n        <state value=\"QLD\" />\r\n        <postalCode value=\"4000\" />\r\n        <country value=\"AUS\" />\r\n    </address>\r\n    <maritalStatus>\r\n        <coding>\r\n            <system value=\"http://hl7.org/fhir/v3/MaritalStatus\" />\r\n            <code value=\"M\" />\r\n            <display value=\"Married\" />\r\n        </coding>\r\n    </maritalStatus>\r\n</Patient>"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "33070c65-c573-4452-b103-b3b6a191eb93",
+					"name": "Create Patient - Patient/269487/_history/1&quot;",
+					"originalRequest": {
+						"url": "{{ServerAddress}}/Patient",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"description": "",
+								"warning": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "{{Content-Type}}",
+								"description": "",
+								"warning": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<Patient xmlns=\"http://hl7.org/fhir\">\r\n    <name>\r\n        <use value=\"official\" />\r\n        <text value=\"John Doe\" />\r\n        <family value=\"Doe\" />\r\n        <given value=\"John\" />\r\n        <prefix value=\"Mr\" />\r\n    </name>\r\n    <telecom>\r\n        <system value=\"phone\" />\r\n        <value value=\"+61481059995\" />\r\n        <use value=\"mobile\" />\r\n    </telecom>\r\n    <gender value=\"male\" />\r\n    <birthDate value=\"1973-09-30\" />\r\n    <address>\r\n        <use value=\"work\" />\r\n        <line value=\"400 George Street\" />\r\n        <city value=\"Brisbane\" />\r\n        <state value=\"QLD\" />\r\n        <postalCode value=\"4000\" />\r\n        <country value=\"AUS\" />\r\n    </address>\r\n    <maritalStatus>\r\n        <coding>\r\n            <system value=\"http://hl7.org/fhir/v3/MaritalStatus\" />\r\n            <code value=\"M\" />\r\n            <display value=\"Married\" />\r\n        </coding>\r\n    </maritalStatus>\r\n</Patient>"
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "xml",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "access-control-expose-headers",
+							"key": "access-control-expose-headers",
+							"value": "Location, Content-Location",
+							"description": "Lets a server whitelist headers that browsers are allowed to access."
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/fhir+xml;charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Tue, 24 Oct 2017 09:43:29 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "location",
+							"key": "location",
+							"value": "http://fhirtest.uhn.ca/baseDstu3/Patient/269487/_history/1",
+							"description": "Used in redirection, or when a new resource has been created."
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "nginx/1.10.3 (Ubuntu)",
+							"description": "A name for the server"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "vary",
+							"key": "vary",
+							"value": "Origin",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "x-fhir-request-validation",
+							"key": "x-fhir-request-validation",
+							"value": "{\"resourceType\":\"OperationOutcome\",\"text\":{\"status\":\"generated\",\"div\":\"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><h1>Operation Outcome</h1><table border=\\\"0\\\"><tr><td style=\\\"font-weight: bold;\\\"...",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "HAPI FHIR 3.1.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.0.1/DSTU3)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 2407,
+					"body": "<OperationOutcome xmlns=\"http://hl7.org/fhir\">\n   <text>\n      <status value=\"generated\"/>\n      <div xmlns=\"http://www.w3.org/1999/xhtml\">\n         <h1>Operation Outcome</h1>\n         <table border=\"0\">\n            <tr>\n               <td style=\"font-weight: bold;\">INFORMATION</td>\n               <td>[]</td>\n               <td>\n                  <pre>Successfully created resource &quot;Patient/269487/_history/1&quot; in 2ms</pre>\n               </td> \n            </tr> \n            <tr> \n               <td style=\"font-weight: bold;\">INFORMATION</td> \n               <td>[]</td> \n               <td>\n                  <pre>No issues detected during validation</pre>\n               </td> \n            </tr> \n         </table> \n      </div>\n   </text>\n   <issue>\n      <severity value=\"information\"/>\n      <code value=\"informational\"/>\n      <diagnostics value=\"Successfully created resource &quot;Patient/269487/_history/1&quot; in 2ms\"/>\n   </issue>\n   <issue>\n      <severity value=\"information\"/>\n      <code value=\"informational\"/>\n      <diagnostics value=\"No issues detected during validation\"/>\n   </issue>\n</OperationOutcome>"
+				},
+				{
+					"id": "7fc45edc-9b2d-45a0-abe2-6a3ab5ffb7a7",
+					"name": "Create Patient - Empty",
+					"originalRequest": {
+						"url": "{{ServerAddress}}/Patient",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"description": "",
+								"warning": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "{{Content-Type}}",
+								"description": "",
+								"warning": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<Patient xmlns=\"http://hl7.org/fhir\">\r\n</Patient>"
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "xml",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "access-control-expose-headers",
+							"key": "access-control-expose-headers",
+							"value": "Location, Content-Location",
+							"description": "Lets a server whitelist headers that browsers are allowed to access."
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/fhir+xml;charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Tue, 24 Oct 2017 09:57:37 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "location",
+							"key": "location",
+							"value": "http://fhirtest.uhn.ca/baseDstu3/Patient/269495/_history/1",
+							"description": "Used in redirection, or when a new resource has been created."
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "nginx/1.10.3 (Ubuntu)",
+							"description": "A name for the server"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "vary",
+							"key": "vary",
+							"value": "Origin",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "x-fhir-request-validation",
+							"key": "x-fhir-request-validation",
+							"value": "{\"resourceType\":\"OperationOutcome\",\"text\":{\"status\":\"generated\",\"div\":\"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><h1>Operation Outcome</h1><table border=\\\"0\\\"><tr><td style=\\\"font-weight: bold;\\\"...",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "HAPI FHIR 3.1.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.0.1/DSTU3)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 2579,
+					"body": "<OperationOutcome xmlns=\"http://hl7.org/fhir\">\n   <text>\n      <status value=\"generated\"/>\n      <div xmlns=\"http://www.w3.org/1999/xhtml\">\n         <h1>Operation Outcome</h1>\n         <table border=\"0\">\n            <tr>\n               <td style=\"font-weight: bold;\">INFORMATION</td>\n               <td>[]</td>\n               <td>\n                  <pre>Successfully created resource &quot;Patient/269495/_history/1&quot; in 2ms</pre>\n               </td> \n            </tr> \n            <tr> \n               <td style=\"font-weight: bold;\">ERROR</td> \n               <td>[/f:Patient]</td> \n               <td>\n                  <pre>Element must have some content</pre>\n               </td> \n            </tr> \n         </table> \n      </div>\n   </text>\n   <issue>\n      <severity value=\"information\"/>\n      <code value=\"informational\"/>\n      <diagnostics value=\"Successfully created resource &quot;Patient/269495/_history/1&quot; in 2ms\"/>\n   </issue>\n   <issue>\n      <severity value=\"error\"/>\n      <code value=\"processing\"/>\n      <diagnostics value=\"Element must have some content\"/>\n      <location value=\"/f:Patient\"/>\n   </issue>\n</OperationOutcome>"
+				},
+				{
+					"id": "2c664b64-5156-48c4-8987-342382ebeb64",
+					"name": "Create Condition",
+					"originalRequest": {
+						"url": "{{ServerAddress}}/Condition",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "{{Accept}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "{{Content-Type}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<Condition xmlns=\"http://hl7.org/fhir\">\r\n  <category>\r\n    <text value=\"Case A\" />\r\n  </category>\r\n  <severity>\r\n    <text value=\"A\" />\r\n  </severity>\r\n  <subject>\r\n    <reference value=\"Patient/269582\" />\r\n  </subject>\r\n</Condition>"
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "xml",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "access-control-expose-headers",
+							"key": "access-control-expose-headers",
+							"value": "Location, Content-Location",
+							"description": "Lets a server whitelist headers that browsers are allowed to access."
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/fhir+xml;charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Tue, 24 Oct 2017 10:56:55 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "location",
+							"key": "location",
+							"value": "http://fhirtest.uhn.ca/baseDstu3/Condition/269653/_history/1",
+							"description": "Used in redirection, or when a new resource has been created."
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "nginx/1.10.3 (Ubuntu)",
+							"description": "A name for the server"
+						},
+						{
+							"name": "transfer-encoding",
+							"key": "transfer-encoding",
+							"value": "chunked",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"name": "vary",
+							"key": "vary",
+							"value": "Origin",
+							"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+						},
+						{
+							"name": "x-fhir-request-validation",
+							"key": "x-fhir-request-validation",
+							"value": "{\"resourceType\":\"OperationOutcome\",\"text\":{\"status\":\"generated\",\"div\":\"<div xmlns=\\\"http://www.w3.org/1999/xhtml\\\"><h1>Operation Outcome</h1><table border=\\\"0\\\"><tr><td style=\\\"font-weight: bold;\\\"...",
+							"description": "Custom header"
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "HAPI FHIR 3.1.0-SNAPSHOT REST Server (FHIR Server; FHIR 3.0.1/DSTU3)",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 668,
+					"body": "<OperationOutcome xmlns=\"http://hl7.org/fhir\">\n   <text>\n      <status value=\"generated\"/>\n      <div xmlns=\"http://www.w3.org/1999/xhtml\">\n         <h1>Operation Outcome</h1>\n         <table border=\"0\">\n            <tr>\n               <td style=\"font-weight: bold;\">INFORMATION</td>\n               <td>[]</td>\n               <td>\n                  <pre>Successfully created resource &quot;Condition/269653/_history/1&quot; in 3ms</pre>\n               </td> \n            </tr> \n            <tr> \n               <td style=\"font-weight: bold;\">ERROR</td> \n               <td>[Condition]</td> \n               <td>\n                  <pre>Condition.clinicalStatus SHALL be present if verificationStatus is not entered-in-error [verificationStatus='entered-in-error' or clinicalStatus.exists()]</pre>\n               </td> \n            </tr> \n         </table> \n      </div>\n   </text>\n   <issue>\n      <severity value=\"information\"/>\n      <code value=\"informational\"/>\n      <diagnostics value=\"Successfully created resource &quot;Condition/269653/_history/1&quot; in 3ms\"/>\n   </issue>\n   <issue>\n      <severity value=\"error\"/>\n      <code value=\"processing\"/>\n      <diagnostics value=\"Condition.clinicalStatus SHALL be present if verificationStatus is not entered-in-error [verificationStatus='entered-in-error' or clinicalStatus.exists()]\"/>\n      <location value=\"Condition\"/>\n   </issue>\n</OperationOutcome>"
+				}
+			]
+		},
+		{
+			"name": "Get Condition",
+			"request": {
+				"url": "{{ServerAddress}}/Condition/269653",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "{{Accept}}",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "ConceptMap is actually pretty powerful, and besides the basic code-to-code mapping described above, it also supports the following usecases:\n- Mapping one code to many codes at once given the same equivalence property (by utilising multiple target properties within one element property)\n- Having a dependency for a mapping, a mapping could only be applicable if a selected element exists in the data and has the specified value"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,31 @@
+{
+  "id": "8396993c-362a-7060-5b2c-eca1afff90f7",
+  "name": "HAPI - FHIR Test",
+  "values": [
+    {
+      "key": "ServerAddress",
+      "value": "https://fhirtest.uhn.ca/baseDstu3",
+      "description": "",
+      "type": "text",
+      "enabled": true
+    },
+    {
+      "key": "Accept",
+      "value": "application/fhir+xml",
+      "description": "",
+      "type": "text",
+      "enabled": true
+    },
+    {
+      "key": "Content-Type",
+      "value": "application/fhir+xml",
+      "description": "",
+      "type": "text",
+      "enabled": true
+    }
+  ],
+  "timestamp": 1508837152500,
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "2017-10-25T09:45:21.471Z",
+  "_postman_exported_using": "Postman/5.3.1"
+}

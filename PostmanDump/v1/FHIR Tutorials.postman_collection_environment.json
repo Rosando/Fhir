@@ -1,0 +1,28 @@
+{
+  "id": "df3f289a-81f3-a1bd-0cdb-e62972f7a99e",
+  "name": "FHIR Tutorials",
+  "values": [
+    {
+      "enabled": true,
+      "key": "Accept",
+      "value": "application/fhir+xml",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "ContentType",
+      "value": "application/fhir+xml",
+      "type": "text"
+    },
+    {
+      "enabled": true,
+      "key": "ServerAddress",
+      "value": "pyrohealth.net/test/stu3/fhir",
+      "type": "text"
+    }
+  ],
+  "timestamp": 1508496453868,
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "2017-10-25T09:44:48.908Z",
+  "_postman_exported_using": "Postman/5.3.1"
+}
