@@ -17,7 +17,15 @@ namespace Fhir.SimpleCRUD
         {
             Patient createdPatient = CreatePatient("John", "Doe", new DateTime(1992, 12, 19));
 
-            Patient readPatient = ReadPatient(createdPatient.Id);
+            Patient readCreatedPatient = ReadPatient(createdPatient.Id);
+
+            Patient updatePatient = UpdatePatientBirthDate(readCreatedPatient, new DateTime(1991, 12, 20));
+
+            Patient readUpdatedPatient = ReadPatient(updatePatient.Id);
+
+            DeletePatient(readUpdatedPatient);
+
+            Patient readDeletedPatient = ReadPatient(readUpdatedPatient.Id);
         }
 
         public static Patient CreatePatient(string given, string family, DateTime birthDate)
@@ -106,7 +114,57 @@ namespace Fhir.SimpleCRUD
 
             return responsePatient;
         }
+
+        public static Patient UpdatePatientBirthDate(Patient patient, DateTime birthDate)
+        {
+            Patient responsePatient = new Patient();
+
+            patient.BirthDate = birthDate.ToFhirDate();
+
+            try
+            {
+                LogToFile("Update Patient");
+
+                LogToFile("Request: ");
+                var patientXml = FhirSerializer.SerializeResourceToXml(patient);
+                LogToFile(XDocument.Parse(patientXml).ToString());
+
+                FhirClient fhirClient = new FhirClient(FhirClientEndPoint);
+                responsePatient = fhirClient.Update(patient);
+
+                LogToFile("Response: ");
+                var responsePatientXml = FhirSerializer.SerializeResourceToXml(responsePatient);
+                LogToFile(XDocument.Parse(responsePatientXml).ToString());
+            }
+            catch (Exception ex)
+            {
+                LogToFile(ex.ToString());
+            }
+
+            return responsePatient;
+        }
         
+        public static void DeletePatient(Patient patient)
+        {
+            try
+            {
+                LogToFile("Delete Patient");
+
+                LogToFile("Request: ");
+                var patientXml = FhirSerializer.SerializeResourceToXml(patient);
+                LogToFile(XDocument.Parse(patientXml).ToString());
+
+                FhirClient fhirClient = new FhirClient(FhirClientEndPoint);
+                fhirClient.Delete(patient);
+
+                LogToFile("Response: Delete has no response");
+            }
+            catch (Exception ex)
+            {
+                LogToFile(ex.ToString());
+            }
+        }
+
         public static void LogToFile(string xml)
         {
             string path = Directory.GetCurrentDirectory() + "\\log.txt";
