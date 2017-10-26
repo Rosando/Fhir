@@ -226,6 +226,30 @@ namespace Fhir.SimpleCRUD
         }
 
         /// <summary>
+        /// Current not used in the application
+        /// </summary>
+        /// <param name="given"></param>
+        /// <param name="family"></param>
+        /// <returns></returns>
+        public static Bundle SearchPatient(string given, string family)
+        {
+            Bundle bundle = new Bundle();
+
+            try
+            {
+                FhirClient fhirClient = new FhirClient(FhirClientEndPoint);
+                bundle = fhirClient.Search<Patient>(new string[] { "family=Fhirman" }); //Note: SearchParams can also be used here
+                //foreach (var Entry in bundle.Entry)
+            }
+            catch(Exception ex)
+            {
+                LogToFile(ex.ToString());
+            }
+
+            return bundle;
+        }
+
+        /// <summary>
         /// File location: bin\Debug\log.txt
         /// </summary>
         /// <param name="xml"></param>
