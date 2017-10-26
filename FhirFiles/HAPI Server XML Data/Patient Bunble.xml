@@ -1,0 +1,1557 @@
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="64a36a1b-0623-4bdb-886e-e773de64c7f1"/>
+    <meta>
+        <lastUpdated value="2017-10-24T05:28:10.517-04:00"/>
+    </meta>
+    <type value="searchset"/>
+    <total value="64"/>
+    <link>
+        <relation value="self"/>
+        <url value="https://fhirtest.uhn.ca/baseDstu3/Patient/32754/$everything"/>
+    </link>
+    <link>
+        <relation value="next"/>
+        <url value="https://fhirtest.uhn.ca/baseDstu3?_getpages=64a36a1b-0623-4bdb-886e-e773de64c7f1&amp;_getpagesoffset=20&amp;_count=20&amp;_pretty=true&amp;_bundletype=searchset"/>
+    </link>
+    <entry>
+        <fullUrl value="https://fhirtest.uhn.ca/baseDstu3/Patient/32754"/>
+        <resource>
+            <Patient xmlns="http://hl7.org/fhir">
+                <id value="32754"/>
+                <meta>
+                    <versionId value="21"/>
+                    <lastUpdated value="2017-10-23T22:53:34.607-04:00"/>
+                    <tag>
+                        <system value="http://example.org/codes/tags"/>
+                        <code value="entered-by-hand-99"/>
+                        <display value="Patient file entered by hand ii"/>
+                    </tag>
+                    <tag>
+                        <system value="http://projectcrucible.org"/>
+                        <code value="testdata"/>
+                    </tag>
+                    <tag>
+                        <system value="http://example.org/codes/tags"/>
+                        <code value="profile value"/>
+                        <display value="http://training.example.org/StructureDefinition/training-exercise-profile"/>
+                    </tag>
+                    <tag>
+                        <system value="http://example.org/codes/tags/done2"/>
+                        <code value="entered-by-hand"/>
+                        <display value="Patient File entered by hand"/>
+                    </tag>
+                    <tag>
+                        <system value="http://example.org/codes/tags/done"/>
+                        <code value="entered-by-hand"/>
+                        <display value="Patient File entered by hand"/>
+                    </tag>
+                    <tag>
+                        <system value="http://example.org/codes/tags"/>
+                        <code value="testTag"/>
+                        <display value="Patient file entered by hand"/>
+                    </tag>
+                    <tag>
+                        <system value="http://example.org/codes/tags"/>
+                        <code value="entered-by-hand"/>
+                        <display value="Patient File entered by hand"/>
+                    </tag>
+                </meta>
+                <language value="sv"/>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <table class="hapiPropertyTable">
+                            <tbody/>
+                        </table>
+                    </div>
+                </text>
+                <active value="true"/>
+                <name>
+                    <family value="Kramer"/>
+                    <given value="Ewout"/>
+                </name>
+                <name>
+                    <family value="Kramer"/>
+                    <given value="Ewout"/>
+                </name>
+                <gender value="female"/>
+                <birthDate value="2017-10-22"/>
+                <deceasedBoolean value="false"/>
+                <maritalStatus>
+                    <coding>
+                        <system value="http://hl7.org/fhir/v3/MaritalStatus"/>
+                        <code value="S"/>
+                    </coding>
+                </maritalStatus>
+                <multipleBirthInteger value="24"/>
+            </Patient>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://fhirtest.uhn.ca/baseDstu3/Observation/269461"/>
+        <resource>
+            <Observation xmlns="http://hl7.org/fhir">
+                <id value="269461"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-10-24T04:14:59.464-04:00"/>
+                </meta>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">Body Temperature</div>
+                </text>
+                <basedOn>
+                    <reference value="ProcedureRequest/cf-1501883364839"/>
+                </basedOn>
+                <status value="registered"/>
+                <code>
+                    <coding>
+                        <system value="xHis"/>
+                        <code value="1"/>
+                        <display value="Body Temperature"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="Patient/32754"/>
+                </subject>
+                <referenceRange>
+                    <low>
+                        <value value="34"/>
+                        <unit value="C"/>
+                    </low>
+                    <high>
+                        <value value="44"/>
+                        <unit value="C"/>
+                    </high>
+                </referenceRange>
+            </Observation>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://fhirtest.uhn.ca/baseDstu3/Appointment/267520"/>
+        <resource>
+            <Appointment xmlns="http://hl7.org/fhir">
+                <id value="267520"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-10-23T05:53:41.373-04:00"/>
+                </meta>
+                <extension url="urn:ClinicianGender">
+                    <valueCode value="male"/>
+                </extension>
+                <identifier>
+                    <value value="23"/>
+                </identifier>
+                <status value="proposed"/>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <description value="Free"/>
+                <slot>
+                    <reference value="Slot/73195"/>
+                </slot>
+                <created value="2017-10-23T12:53:38+03:00"/>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="PATIENT"/>
+                            <display value="Patient"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Patient/32754"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="LOC"/>
+                            <display value="Location"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Location/196424"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="SERVICE"/>
+                            <display value="Service"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="HealthcareService/69426"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+            </Appointment>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://fhirtest.uhn.ca/baseDstu3/Appointment/267519"/>
+        <resource>
+            <Appointment xmlns="http://hl7.org/fhir">
+                <id value="267519"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-10-23T05:47:55.865-04:00"/>
+                </meta>
+                <extension url="urn:ClinicianGender">
+                    <valueCode value="male"/>
+                </extension>
+                <identifier>
+                    <value value="23"/>
+                </identifier>
+                <status value="cancelled"/>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <description value="Free"/>
+                <slot>
+                    <reference value="Slot/73195"/>
+                </slot>
+                <created value="2017-10-23T12:47:51+03:00"/>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="PATIENT"/>
+                            <display value="Patient"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Patient/32754"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="declined"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="LOC"/>
+                            <display value="Location"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Location/196424"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="SERVICE"/>
+                            <display value="Service"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="HealthcareService/69426"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+            </Appointment>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://fhirtest.uhn.ca/baseDstu3/Appointment/267515"/>
+        <resource>
+            <Appointment xmlns="http://hl7.org/fhir">
+                <id value="267515"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-10-23T05:39:17.279-04:00"/>
+                </meta>
+                <extension url="urn:ClinicianGender">
+                    <valueCode value="male"/>
+                </extension>
+                <identifier>
+                    <value value="23"/>
+                </identifier>
+                <status value="cancelled"/>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <description value="Free"/>
+                <slot>
+                    <reference value="Slot/73195"/>
+                </slot>
+                <created value="2017-10-23T12:39:10+03:00"/>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="PATIENT"/>
+                            <display value="Patient"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Patient/32754"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="declined"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="LOC"/>
+                            <display value="Location"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Location/196424"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="SERVICE"/>
+                            <display value="Service"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="HealthcareService/69426"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+            </Appointment>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://fhirtest.uhn.ca/baseDstu3/Appointment/267130"/>
+        <resource>
+            <Appointment xmlns="http://hl7.org/fhir">
+                <id value="267130"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-10-22T05:28:20.389-04:00"/>
+                </meta>
+                <identifier>
+                    <value value="23"/>
+                </identifier>
+                <status value="cancelled"/>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <description value="Free"/>
+                <slot>
+                    <reference value="Slot/73195"/>
+                </slot>
+                <created value="2017-10-22T12:28:18+03:00"/>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="PATIENT"/>
+                            <display value="Patient"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Patient/32754"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="declined"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="LOC"/>
+                            <display value="Location"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Location/196424"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="SERVICE"/>
+                            <display value="Service"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="HealthcareService/69426"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+            </Appointment>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://fhirtest.uhn.ca/baseDstu3/Appointment/267129"/>
+        <resource>
+            <Appointment xmlns="http://hl7.org/fhir">
+                <id value="267129"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-10-22T05:28:18.355-04:00"/>
+                </meta>
+                <identifier>
+                    <value value="23"/>
+                </identifier>
+                <status value="cancelled"/>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <description value="Free"/>
+                <slot>
+                    <reference value="Slot/73195"/>
+                </slot>
+                <created value="2017-10-22T12:28:16+03:00"/>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="PATIENT"/>
+                            <display value="Patient"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Patient/32754"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="declined"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="LOC"/>
+                            <display value="Location"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Location/196424"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="SERVICE"/>
+                            <display value="Service"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="HealthcareService/69426"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+            </Appointment>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://fhirtest.uhn.ca/baseDstu3/Appointment/267128"/>
+        <resource>
+            <Appointment xmlns="http://hl7.org/fhir">
+                <id value="267128"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-10-22T05:27:55.967-04:00"/>
+                </meta>
+                <identifier>
+                    <value value="23"/>
+                </identifier>
+                <status value="cancelled"/>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <description value="Free"/>
+                <slot>
+                    <reference value="Slot/73195"/>
+                </slot>
+                <created value="2017-10-22T12:27:54+03:00"/>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="PATIENT"/>
+                            <display value="Patient"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Patient/32754"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="declined"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="LOC"/>
+                            <display value="Location"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Location/196424"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="SERVICE"/>
+                            <display value="Service"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="HealthcareService/69426"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+            </Appointment>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://fhirtest.uhn.ca/baseDstu3/Appointment/267127"/>
+        <resource>
+            <Appointment xmlns="http://hl7.org/fhir">
+                <id value="267127"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-10-22T05:27:53.135-04:00"/>
+                </meta>
+                <identifier>
+                    <value value="23"/>
+                </identifier>
+                <status value="cancelled"/>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <description value="Free"/>
+                <slot>
+                    <reference value="Slot/73195"/>
+                </slot>
+                <created value="2017-10-22T12:27:51+03:00"/>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="PATIENT"/>
+                            <display value="Patient"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Patient/32754"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="declined"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="LOC"/>
+                            <display value="Location"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Location/196424"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="SERVICE"/>
+                            <display value="Service"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="HealthcareService/69426"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+            </Appointment>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://fhirtest.uhn.ca/baseDstu3/Appointment/267126"/>
+        <resource>
+            <Appointment xmlns="http://hl7.org/fhir">
+                <id value="267126"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-10-22T05:27:50.640-04:00"/>
+                </meta>
+                <identifier>
+                    <value value="23"/>
+                </identifier>
+                <status value="cancelled"/>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <description value="Free"/>
+                <slot>
+                    <reference value="Slot/73195"/>
+                </slot>
+                <created value="2017-10-22T12:27:48+03:00"/>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="PATIENT"/>
+                            <display value="Patient"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Patient/32754"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="declined"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="LOC"/>
+                            <display value="Location"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Location/196424"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="SERVICE"/>
+                            <display value="Service"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="HealthcareService/69426"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+            </Appointment>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://fhirtest.uhn.ca/baseDstu3/Appointment/267125"/>
+        <resource>
+            <Appointment xmlns="http://hl7.org/fhir">
+                <id value="267125"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-10-22T05:27:48.125-04:00"/>
+                </meta>
+                <identifier>
+                    <value value="23"/>
+                </identifier>
+                <status value="cancelled"/>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <description value="Free"/>
+                <slot>
+                    <reference value="Slot/73195"/>
+                </slot>
+                <created value="2017-10-22T12:27:45+03:00"/>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="PATIENT"/>
+                            <display value="Patient"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Patient/32754"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="declined"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="LOC"/>
+                            <display value="Location"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Location/196424"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="SERVICE"/>
+                            <display value="Service"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="HealthcareService/69426"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+            </Appointment>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://fhirtest.uhn.ca/baseDstu3/Appointment/267124"/>
+        <resource>
+            <Appointment xmlns="http://hl7.org/fhir">
+                <id value="267124"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-10-22T05:27:44.439-04:00"/>
+                </meta>
+                <identifier>
+                    <value value="23"/>
+                </identifier>
+                <status value="cancelled"/>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <description value="Free"/>
+                <slot>
+                    <reference value="Slot/73195"/>
+                </slot>
+                <created value="2017-10-22T12:27:41+03:00"/>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="PATIENT"/>
+                            <display value="Patient"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Patient/32754"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="declined"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="LOC"/>
+                            <display value="Location"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Location/196424"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="SERVICE"/>
+                            <display value="Service"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="HealthcareService/69426"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+            </Appointment>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://fhirtest.uhn.ca/baseDstu3/Appointment/267123"/>
+        <resource>
+            <Appointment xmlns="http://hl7.org/fhir">
+                <id value="267123"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-10-22T05:27:40.722-04:00"/>
+                </meta>
+                <identifier>
+                    <value value="23"/>
+                </identifier>
+                <status value="cancelled"/>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <description value="Free"/>
+                <slot>
+                    <reference value="Slot/73195"/>
+                </slot>
+                <created value="2017-10-22T12:27:37+03:00"/>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="PATIENT"/>
+                            <display value="Patient"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Patient/32754"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="declined"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="LOC"/>
+                            <display value="Location"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Location/196424"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="SERVICE"/>
+                            <display value="Service"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="HealthcareService/69426"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+            </Appointment>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://fhirtest.uhn.ca/baseDstu3/Appointment/267122"/>
+        <resource>
+            <Appointment xmlns="http://hl7.org/fhir">
+                <id value="267122"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-10-22T05:27:24.821-04:00"/>
+                </meta>
+                <identifier>
+                    <value value="23"/>
+                </identifier>
+                <status value="cancelled"/>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <description value="Free"/>
+                <slot>
+                    <reference value="Slot/73195"/>
+                </slot>
+                <created value="2017-10-22T12:27:19+03:00"/>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="PATIENT"/>
+                            <display value="Patient"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Patient/32754"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="declined"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="LOC"/>
+                            <display value="Location"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Location/196424"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="SERVICE"/>
+                            <display value="Service"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="HealthcareService/69426"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+            </Appointment>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://fhirtest.uhn.ca/baseDstu3/Appointment/267121"/>
+        <resource>
+            <Appointment xmlns="http://hl7.org/fhir">
+                <id value="267121"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-10-22T05:26:32.744-04:00"/>
+                </meta>
+                <identifier>
+                    <value value="23"/>
+                </identifier>
+                <status value="cancelled"/>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <description value="Free"/>
+                <slot>
+                    <reference value="Slot/73195"/>
+                </slot>
+                <created value="2017-10-22T12:26:30+03:00"/>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="PATIENT"/>
+                            <display value="Patient"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Patient/32754"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="declined"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="LOC"/>
+                            <display value="Location"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Location/196424"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="SERVICE"/>
+                            <display value="Service"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="HealthcareService/69426"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+            </Appointment>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://fhirtest.uhn.ca/baseDstu3/Appointment/267120"/>
+        <resource>
+            <Appointment xmlns="http://hl7.org/fhir">
+                <id value="267120"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-10-22T05:25:52.282-04:00"/>
+                </meta>
+                <identifier>
+                    <value value="23"/>
+                </identifier>
+                <status value="proposed"/>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <description value="Free"/>
+                <slot>
+                    <reference value="Slot/73195"/>
+                </slot>
+                <created value="2017-10-22T12:25:50+03:00"/>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="PATIENT"/>
+                            <display value="Patient"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Patient/32754"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="LOC"/>
+                            <display value="Location"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Location/196424"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="SERVICE"/>
+                            <display value="Service"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="HealthcareService/69426"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+            </Appointment>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://fhirtest.uhn.ca/baseDstu3/Appointment/267119"/>
+        <resource>
+            <Appointment xmlns="http://hl7.org/fhir">
+                <id value="267119"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-10-22T05:25:41.030-04:00"/>
+                </meta>
+                <identifier>
+                    <value value="23"/>
+                </identifier>
+                <status value="cancelled"/>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <reason>
+                    <text value="Free"/>
+                </reason>
+                <description value="Free"/>
+                <slot>
+                    <reference value="Slot/73195"/>
+                </slot>
+                <created value="2017-10-22T12:25:37+03:00"/>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="PATIENT"/>
+                            <display value="Patient"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Patient/32754"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="declined"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="LOC"/>
+                            <display value="Location"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="Location/196424"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+                <participant>
+                    <type>
+                        <coding>
+                            <system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+                            <code value="SERVICE"/>
+                            <display value="Service"/>
+                        </coding>
+                    </type>
+                    <actor>
+                        <reference value="HealthcareService/69426"/>
+                    </actor>
+                    <required value="required"/>
+                    <status value="needs-action"/>
+                </participant>
+            </Appointment>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://fhirtest.uhn.ca/baseDstu3/QuestionnaireResponse/262732"/>
+        <resource>
+            <QuestionnaireResponse xmlns="http://hl7.org/fhir">
+                <id value="262732"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-10-18T14:41:47.443-04:00"/>
+                </meta>
+                <questionnaire>
+                    <reference value="Questionnaire/235698"/>
+                </questionnaire>
+                <status value="completed"/>
+                <subject>
+                    <reference value="Patient/32754"/>
+                </subject>
+                <authored value="2017-10-18T14:41:43-04:00"/>
+                <author>
+                    <reference value="Practitioner/143120"/>
+                </author>
+                <source>
+                    <reference value="Patient/32754"/>
+                </source>
+                <item>
+                    <linkId value="ca-uhn-ucan-crf-add-patient"/>
+                    <definition value="add-patient"/>
+                    <text value="Add New Patient"/>
+                    <item>
+                        <linkId value="ca-uhn-ucan-crf-add-patient-new-patient"/>
+                        <definition value="new-patient"/>
+                        <text value="New Patient"/>
+                        <item>
+                            <linkId value="ca-uhn-ucan-crf-add-patient-new-patient-first"/>
+                            <definition value="first"/>
+                            <text value="First Name"/>
+                            <answer>
+                                <valueString value="Akib"/>
+                            </answer>
+                        </item>
+                        <item>
+                            <linkId value="ca-uhn-ucan-crf-add-patient-new-patient-last"/>
+                            <definition value="last"/>
+                            <text value="Last Name"/>
+                            <answer>
+                                <valueString value="Uddin"/>
+                            </answer>
+                        </item>
+                        <item>
+                            <linkId value="ca-uhn-ucan-crf-add-patient-new-patient-site"/>
+                            <definition value="site"/>
+                            <text value="Site ID"/>
+                            <answer>
+                                <valueString value="01"/>
+                            </answer>
+                        </item>
+                        <item>
+                            <linkId value="ca-uhn-ucan-crf-add-patient-new-patient-patient"/>
+                            <definition value="patient"/>
+                            <text value="Patient ID"/>
+                            <answer>
+                                <valueString value="1234"/>
+                            </answer>
+                        </item>
+                        <item>
+                            <linkId value="ca-uhn-ucan-crf-add-patient-new-patient-global"/>
+                            <definition value="global"/>
+                            <text value="Global ID"/>
+                            <answer>
+                                <valueString value="123456"/>
+                            </answer>
+                        </item>
+                        <item>
+                            <linkId value="ca-uhn-ucan-crf-add-patient-new-patient-cohort"/>
+                            <definition value="cohort"/>
+                            <text value="Cohort Number (select all applicable)"/>
+                            <answer>
+                                <valueCoding>
+                                    <system value="ca.uhn.ucan.cohortNumber"/>
+                                    <code value="1"/>
+                                    <display value="Diagnosis of JIA"/>
+                                </valueCoding>
+                            </answer>
+                            <answer>
+                                <valueCoding>
+                                    <system value="ca.uhn.ucan.cohortNumber"/>
+                                    <code value="2"/>
+                                    <display value="Start biologics"/>
+                                </valueCoding>
+                            </answer>
+                        </item>
+                    </item>
+                    <item>
+                        <linkId value="ca-uhn-ucan-crf-add-patient-demographics-general"/>
+                        <definition value="demographics-general"/>
+                        <text value="Demographics"/>
+                        <item>
+                            <linkId value="ca-uhn-ucan-crf-add-patient-demographics-general-country"/>
+                            <definition value="country"/>
+                            <text value="Enrolling country"/>
+                            <answer>
+                                <valueCoding>
+                                    <system value="urn:iso:std:iso:3166"/>
+                                    <code value="CA"/>
+                                    <display value="Canada"/>
+                                </valueCoding>
+                            </answer>
+                        </item>
+                        <item>
+                            <linkId value="ca-uhn-ucan-crf-add-patient-demographics-general-birthdate"/>
+                            <definition value="birthdate"/>
+                            <text value="Date of birth (DD/MM/YYYY)"/>
+                            <answer>
+                                <valueDate value="1989-12-17"/>
+                            </answer>
+                        </item>
+                        <item>
+                            <linkId value="ca-uhn-ucan-crf-add-patient-demographics-general-sex"/>
+                            <definition value="sex"/>
+                            <text value="Biological sex at birth"/>
+                            <answer>
+                                <valueCoding>
+                                    <system value="http://hl7.org/fhir/administrative-gender"/>
+                                    <code value="male"/>
+                                    <display value="Male"/>
+                                </valueCoding>
+                            </answer>
+                        </item>
+                        <item>
+                            <linkId value="ca-uhn-ucan-crf-add-patient-demographics-general-gender"/>
+                            <definition value="gender"/>
+                            <text value="Gender identity"/>
+                            <answer>
+                                <valueCoding>
+                                    <system value="http://hl7.org/fhir/administrative-gender"/>
+                                    <code value="male"/>
+                                    <display value="Male"/>
+                                </valueCoding>
+                            </answer>
+                        </item>
+                        <item>
+                            <linkId value="ca-uhn-ucan-crf-add-patient-demographics-general-postal-code"/>
+                            <definition value="postal-code"/>
+                            <text value="Postal code"/>
+                            <answer>
+                                <valueString value="M7R1K9"/>
+                            </answer>
+                        </item>
+                        <item>
+                            <linkId value="ca-uhn-ucan-crf-add-patient-demographics-general-symptoms"/>
+                            <definition value="symptoms"/>
+                            <text value="Date of first joint symptoms (or estimated, MM / YYYY)"/>
+                            <answer>
+                                <valueDate value="2005-06-01"/>
+                            </answer>
+                        </item>
+                        <item>
+                            <linkId value="ca-uhn-ucan-crf-add-patient-demographics-general-jia"/>
+                            <definition value="jia"/>
+                            <text value="Formal Diagnosis of JIA"/>
+                            <answer>
+                                <valueBoolean value="true"/>
+                            </answer>
+                        </item>
+                        <item>
+                            <linkId value="ca-uhn-ucan-crf-add-patient-demographics-general-symptoms"/>
+                            <definition value="symptoms"/>
+                            <text value="Date of first joint symptoms (or estimated, MM / YYYY)"/>
+                            <answer>
+                                <valueDate value="2009-08-01"/>
+                            </answer>
+                        </item>
+                    </item>
+                    <item>
+                        <linkId value="ca-uhn-ucan-crf-add-patient-arthritis-markers"/>
+                        <definition value="arthritis-markers"/>
+                        <text value="Arthritis markers"/>
+                        <item>
+                            <linkId value="ca-uhn-ucan-crf-add-patient-history-rheumatic-labs"/>
+                            <definition value="labs"/>
+                            <text value="Which labs have been performed?"/>
+                            <answer>
+                                <valueReference>
+                                    <reference value="Observation/262727"/>
+                                </valueReference>
+                            </answer>
+                            <answer>
+                                <valueReference>
+                                    <reference value="Observation/262728"/>
+                                </valueReference>
+                            </answer>
+                        </item>
+                    </item>
+                    <item>
+                        <linkId value="ca-uhn-ucan-crf-add-patient-medications"/>
+                        <definition value="medications"/>
+                        <text value="Medications"/>
+                        <item>
+                            <linkId value="ca-uhn-ucan-crf-add-patient-medications-entries"/>
+                            <definition value="entries"/>
+                            <answer>
+                                <valueReference>
+                                    <reference value="MedicationAdministration/262729"/>
+                                </valueReference>
+                            </answer>
+                            <answer>
+                                <valueReference>
+                                    <reference value="MedicationAdministration/262730"/>
+                                </valueReference>
+                            </answer>
+                            <answer>
+                                <valueReference>
+                                    <reference value="MedicationAdministration/262731"/>
+                                </valueReference>
+                            </answer>
+                        </item>
+                    </item>
+                    <item>
+                        <linkId value="ca-uhn-ucan-crf-add-patient-disease-activity"/>
+                        <definition value="disease-activity"/>
+                        <text value="Disease actvity score (JADAS)"/>
+                        <item>
+                            <linkId value="ca-uhn-ucan-crf-add-patient-disease-activity-uveitis"/>
+                            <definition value="uveitis"/>
+                            <text value="Active uveitis"/>
+                            <answer>
+                                <valueBoolean value="false"/>
+                            </answer>
+                        </item>
+                        <item>
+                            <linkId value="ca-uhn-ucan-crf-add-patient-disease-activity-number-active"/>
+                            <definition value="number-active"/>
+                            <text value="Number of active joints"/>
+                            <answer>
+                                <valueInteger value="8"/>
+                            </answer>
+                        </item>
+                        <item>
+                            <linkId value="ca-uhn-ucan-crf-add-patient-disease-activity-patient-vas"/>
+                            <definition value="patient-vas"/>
+                            <text value="Patient/parent VAS"/>
+                            <answer>
+                                <valueInteger value="5"/>
+                            </answer>
+                        </item>
+                    </item>
+                </item>
+            </QuestionnaireResponse>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://fhirtest.uhn.ca/baseDstu3/MedicationAdministration/262731"/>
+        <resource>
+            <MedicationAdministration xmlns="http://hl7.org/fhir">
+                <id value="262731"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-10-18T14:41:46.835-04:00"/>
+                </meta>
+                <extension url="entered">
+                    <valueReference>
+                        <reference value="Practitioner/456"/>
+                    </valueReference>
+                </extension>
+                <extension url="confirmed">
+                    <valueBoolean value="true"/>
+                </extension>
+                <status value="in-progress"/>
+                <medicationCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="116601002"/>
+                        <display value="Prednisolone"/>
+                    </coding>
+                </medicationCodeableConcept>
+                <subject>
+                    <reference value="Patient/32754"/>
+                </subject>
+                <effectivePeriod>
+                    <start value="2017-08-24"/>
+                    <end value="2019-05-22"/>
+                </effectivePeriod>
+                <dosage>
+                    <rateQuantity>
+                        <value value="5"/>
+                        <unit value="mg/day"/>
+                    </rateQuantity>
+                </dosage>
+            </MedicationAdministration>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+    <entry>
+        <fullUrl value="https://fhirtest.uhn.ca/baseDstu3/MedicationAdministration/262730"/>
+        <resource>
+            <MedicationAdministration xmlns="http://hl7.org/fhir">
+                <id value="262730"/>
+                <meta>
+                    <versionId value="1"/>
+                    <lastUpdated value="2017-10-18T14:41:46.726-04:00"/>
+                </meta>
+                <extension url="entered">
+                    <valueReference>
+                        <reference value="Patient/32754"/>
+                    </valueReference>
+                </extension>
+                <extension url="confirmed">
+                    <valueBoolean value="false"/>
+                </extension>
+                <status value="stopped"/>
+                <medicationCodeableConcept>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="444649004"/>
+                        <display value="Tocilizumab"/>
+                    </coding>
+                </medicationCodeableConcept>
+                <subject>
+                    <reference value="Patient/32754"/>
+                </subject>
+                <effectivePeriod>
+                    <start value="2017-08-17"/>
+                    <end value="2019-05-22"/>
+                </effectivePeriod>
+                <notGiven value="true"/>
+                <reasonNotGiven>
+                    <text value="side fix/intolerance"/>
+                </reasonNotGiven>
+            </MedicationAdministration>
+        </resource>
+        <search>
+            <mode value="match"/>
+        </search>
+    </entry>
+</Bundle>

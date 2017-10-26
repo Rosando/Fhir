@@ -1,0 +1,69 @@
+<Patient xmlns="http://hl7.org/fhir">
+	<id value="32754"/>
+	<meta>
+		<versionId value="21"/>
+		<lastUpdated value="2017-10-23T22:53:34.607-04:00"/>
+		<tag>
+			<system value="http://example.org/codes/tags"/>
+			<code value="entered-by-hand-99"/>
+			<display value="Patient file entered by hand ii"/>
+		</tag>
+		<tag>
+			<system value="http://projectcrucible.org"/>
+			<code value="testdata"/>
+		</tag>
+		<tag>
+			<system value="http://example.org/codes/tags"/>
+			<code value="profile value"/>
+			<display value="http://training.example.org/StructureDefinition/training-exercise-profile"/>
+		</tag>
+		<tag>
+			<system value="http://example.org/codes/tags/done2"/>
+			<code value="entered-by-hand"/>
+			<display value="Patient File entered by hand"/>
+		</tag>
+		<tag>
+			<system value="http://example.org/codes/tags/done"/>
+			<code value="entered-by-hand"/>
+			<display value="Patient File entered by hand"/>
+		</tag>
+		<tag>
+			<system value="http://example.org/codes/tags"/>
+			<code value="testTag"/>
+			<display value="Patient file entered by hand"/>
+		</tag>
+		<tag>
+			<system value="http://example.org/codes/tags"/>
+			<code value="entered-by-hand"/>
+			<display value="Patient File entered by hand"/>
+		</tag>
+	</meta>
+	<language value="sv"/>
+	<text>
+		<status value="generated"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<table class="hapiPropertyTable">
+				<tbody/>
+			</table>
+		</div>
+	</text>
+	<active value="true"/>
+	<name>
+		<family value="Kramer"/>
+		<given value="Ewout"/>
+	</name>
+	<name>
+		<family value="Kramer"/>
+		<given value="Ewout"/>
+	</name>
+	<gender value="female"/>
+	<birthDate value="2017-10-22"/>
+	<deceasedBoolean value="false"/>
+	<maritalStatus>
+		<coding>
+			<system value="http://hl7.org/fhir/v3/MaritalStatus"/>
+			<code value="S"/>
+		</coding>
+	</maritalStatus>
+	<multipleBirthInteger value="24"/>
+</Patient>

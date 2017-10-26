@@ -1,0 +1,35 @@
+<Observation xmlns="http://hl7.org/fhir">
+	<id value="269461"/>
+	<meta>
+		<versionId value="1"/>
+		<lastUpdated value="2017-10-24T04:14:59.464-04:00"/>
+	</meta>
+	<text>
+		<status value="generated"/>
+		<div xmlns="http://www.w3.org/1999/xhtml">Body Temperature</div>
+	</text>
+	<basedOn>
+		<reference value="ProcedureRequest/cf-1501883364839"/>
+	</basedOn>
+	<status value="registered"/>
+	<code>
+		<coding>
+			<system value="xHis"/>
+			<code value="1"/>
+			<display value="Body Temperature"/>
+		</coding>
+	</code>
+	<subject>
+		<reference value="Patient/32754"/>
+	</subject>
+	<referenceRange>
+		<low>
+			<value value="34"/>
+			<unit value="C"/>
+		</low>
+		<high>
+			<value value="44"/>
+			<unit value="C"/>
+		</high>
+	</referenceRange>
+</Observation>

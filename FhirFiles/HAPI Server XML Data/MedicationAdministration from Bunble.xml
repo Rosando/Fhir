@@ -1,0 +1,36 @@
+<MedicationAdministration xmlns="http://hl7.org/fhir">
+	<id value="262731"/>
+	<meta>
+		<versionId value="1"/>
+		<lastUpdated value="2017-10-18T14:41:46.835-04:00"/>
+	</meta>
+	<extension url="entered">
+		<valueReference>
+			<reference value="Practitioner/456"/>
+		</valueReference>
+	</extension>
+	<extension url="confirmed">
+		<valueBoolean value="true"/>
+	</extension>
+	<status value="in-progress"/>
+	<medicationCodeableConcept>
+		<coding>
+			<system value="http://snomed.info/sct"/>
+			<code value="116601002"/>
+			<display value="Prednisolone"/>
+		</coding>
+	</medicationCodeableConcept>
+	<subject>
+		<reference value="Patient/32754"/>
+	</subject>
+	<effectivePeriod>
+		<start value="2017-08-24"/>
+		<end value="2019-05-22"/>
+	</effectivePeriod>
+	<dosage>
+		<rateQuantity>
+			<value value="5"/>
+			<unit value="mg/day"/>
+		</rateQuantity>
+	</dosage>
+</MedicationAdministration>

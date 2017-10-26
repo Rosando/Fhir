@@ -1,0 +1,244 @@
+<QuestionnaireResponse xmlns="http://hl7.org/fhir">
+	<id value="262732"/>
+	<meta>
+		<versionId value="1"/>
+		<lastUpdated value="2017-10-18T14:41:47.443-04:00"/>
+	</meta>
+	<questionnaire>
+		<reference value="Questionnaire/235698"/>
+	</questionnaire>
+	<status value="completed"/>
+	<subject>
+		<reference value="Patient/32754"/>
+	</subject>
+	<authored value="2017-10-18T14:41:43-04:00"/>
+	<author>
+		<reference value="Practitioner/143120"/>
+	</author>
+	<source>
+		<reference value="Patient/32754"/>
+	</source>
+	<item>
+		<linkId value="ca-uhn-ucan-crf-add-patient"/>
+		<definition value="add-patient"/>
+		<text value="Add New Patient"/>
+		<item>
+			<linkId value="ca-uhn-ucan-crf-add-patient-new-patient"/>
+			<definition value="new-patient"/>
+			<text value="New Patient"/>
+			<item>
+				<linkId value="ca-uhn-ucan-crf-add-patient-new-patient-first"/>
+				<definition value="first"/>
+				<text value="First Name"/>
+				<answer>
+					<valueString value="Akib"/>
+				</answer>
+			</item>
+			<item>
+				<linkId value="ca-uhn-ucan-crf-add-patient-new-patient-last"/>
+				<definition value="last"/>
+				<text value="Last Name"/>
+				<answer>
+					<valueString value="Uddin"/>
+				</answer>
+			</item>
+			<item>
+				<linkId value="ca-uhn-ucan-crf-add-patient-new-patient-site"/>
+				<definition value="site"/>
+				<text value="Site ID"/>
+				<answer>
+					<valueString value="01"/>
+				</answer>
+			</item>
+			<item>
+				<linkId value="ca-uhn-ucan-crf-add-patient-new-patient-patient"/>
+				<definition value="patient"/>
+				<text value="Patient ID"/>
+				<answer>
+					<valueString value="1234"/>
+				</answer>
+			</item>
+			<item>
+				<linkId value="ca-uhn-ucan-crf-add-patient-new-patient-global"/>
+				<definition value="global"/>
+				<text value="Global ID"/>
+				<answer>
+					<valueString value="123456"/>
+				</answer>
+			</item>
+			<item>
+				<linkId value="ca-uhn-ucan-crf-add-patient-new-patient-cohort"/>
+				<definition value="cohort"/>
+				<text value="Cohort Number (select all applicable)"/>
+				<answer>
+					<valueCoding>
+						<system value="ca.uhn.ucan.cohortNumber"/>
+						<code value="1"/>
+						<display value="Diagnosis of JIA"/>
+					</valueCoding>
+				</answer>
+				<answer>
+					<valueCoding>
+						<system value="ca.uhn.ucan.cohortNumber"/>
+						<code value="2"/>
+						<display value="Start biologics"/>
+					</valueCoding>
+				</answer>
+			</item>
+		</item>
+		<item>
+			<linkId value="ca-uhn-ucan-crf-add-patient-demographics-general"/>
+			<definition value="demographics-general"/>
+			<text value="Demographics"/>
+			<item>
+				<linkId value="ca-uhn-ucan-crf-add-patient-demographics-general-country"/>
+				<definition value="country"/>
+				<text value="Enrolling country"/>
+				<answer>
+					<valueCoding>
+						<system value="urn:iso:std:iso:3166"/>
+						<code value="CA"/>
+						<display value="Canada"/>
+					</valueCoding>
+				</answer>
+			</item>
+			<item>
+				<linkId value="ca-uhn-ucan-crf-add-patient-demographics-general-birthdate"/>
+				<definition value="birthdate"/>
+				<text value="Date of birth (DD/MM/YYYY)"/>
+				<answer>
+					<valueDate value="1989-12-17"/>
+				</answer>
+			</item>
+			<item>
+				<linkId value="ca-uhn-ucan-crf-add-patient-demographics-general-sex"/>
+				<definition value="sex"/>
+				<text value="Biological sex at birth"/>
+				<answer>
+					<valueCoding>
+						<system value="http://hl7.org/fhir/administrative-gender"/>
+						<code value="male"/>
+						<display value="Male"/>
+					</valueCoding>
+				</answer>
+			</item>
+			<item>
+				<linkId value="ca-uhn-ucan-crf-add-patient-demographics-general-gender"/>
+				<definition value="gender"/>
+				<text value="Gender identity"/>
+				<answer>
+					<valueCoding>
+						<system value="http://hl7.org/fhir/administrative-gender"/>
+						<code value="male"/>
+						<display value="Male"/>
+					</valueCoding>
+				</answer>
+			</item>
+			<item>
+				<linkId value="ca-uhn-ucan-crf-add-patient-demographics-general-postal-code"/>
+				<definition value="postal-code"/>
+				<text value="Postal code"/>
+				<answer>
+					<valueString value="M7R1K9"/>
+				</answer>
+			</item>
+			<item>
+				<linkId value="ca-uhn-ucan-crf-add-patient-demographics-general-symptoms"/>
+				<definition value="symptoms"/>
+				<text value="Date of first joint symptoms (or estimated, MM / YYYY)"/>
+				<answer>
+					<valueDate value="2005-06-01"/>
+				</answer>
+			</item>
+			<item>
+				<linkId value="ca-uhn-ucan-crf-add-patient-demographics-general-jia"/>
+				<definition value="jia"/>
+				<text value="Formal Diagnosis of JIA"/>
+				<answer>
+					<valueBoolean value="true"/>
+				</answer>
+			</item>
+			<item>
+				<linkId value="ca-uhn-ucan-crf-add-patient-demographics-general-symptoms"/>
+				<definition value="symptoms"/>
+				<text value="Date of first joint symptoms (or estimated, MM / YYYY)"/>
+				<answer>
+					<valueDate value="2009-08-01"/>
+				</answer>
+			</item>
+		</item>
+		<item>
+			<linkId value="ca-uhn-ucan-crf-add-patient-arthritis-markers"/>
+			<definition value="arthritis-markers"/>
+			<text value="Arthritis markers"/>
+			<item>
+				<linkId value="ca-uhn-ucan-crf-add-patient-history-rheumatic-labs"/>
+				<definition value="labs"/>
+				<text value="Which labs have been performed?"/>
+				<answer>
+					<valueReference>
+						<reference value="Observation/262727"/>
+					</valueReference>
+				</answer>
+				<answer>
+					<valueReference>
+						<reference value="Observation/262728"/>
+					</valueReference>
+				</answer>
+			</item>
+		</item>
+		<item>
+			<linkId value="ca-uhn-ucan-crf-add-patient-medications"/>
+			<definition value="medications"/>
+			<text value="Medications"/>
+			<item>
+				<linkId value="ca-uhn-ucan-crf-add-patient-medications-entries"/>
+				<definition value="entries"/>
+				<answer>
+					<valueReference>
+						<reference value="MedicationAdministration/262729"/>
+					</valueReference>
+				</answer>
+				<answer>
+					<valueReference>
+						<reference value="MedicationAdministration/262730"/>
+					</valueReference>
+				</answer>
+				<answer>
+					<valueReference>
+						<reference value="MedicationAdministration/262731"/>
+					</valueReference>
+				</answer>
+			</item>
+		</item>
+		<item>
+			<linkId value="ca-uhn-ucan-crf-add-patient-disease-activity"/>
+			<definition value="disease-activity"/>
+			<text value="Disease actvity score (JADAS)"/>
+			<item>
+				<linkId value="ca-uhn-ucan-crf-add-patient-disease-activity-uveitis"/>
+				<definition value="uveitis"/>
+				<text value="Active uveitis"/>
+				<answer>
+					<valueBoolean value="false"/>
+				</answer>
+			</item>
+			<item>
+				<linkId value="ca-uhn-ucan-crf-add-patient-disease-activity-number-active"/>
+				<definition value="number-active"/>
+				<text value="Number of active joints"/>
+				<answer>
+					<valueInteger value="8"/>
+				</answer>
+			</item>
+			<item>
+				<linkId value="ca-uhn-ucan-crf-add-patient-disease-activity-patient-vas"/>
+				<definition value="patient-vas"/>
+				<text value="Patient/parent VAS"/>
+				<answer>
+					<valueInteger value="5"/>
+				</answer>
+			</item>
+		</item>
+	</item>
+</QuestionnaireResponse>

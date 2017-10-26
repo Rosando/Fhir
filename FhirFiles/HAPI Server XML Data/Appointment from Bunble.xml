@@ -1,0 +1,64 @@
+<Appointment xmlns="http://hl7.org/fhir">
+	<id value="267520"/>
+	<meta>
+		<versionId value="1"/>
+		<lastUpdated value="2017-10-23T05:53:41.373-04:00"/>
+	</meta>
+	<extension url="urn:ClinicianGender">
+		<valueCode value="male"/>
+	</extension>
+	<identifier>
+		<value value="23"/>
+	</identifier>
+	<status value="proposed"/>
+	<reason>
+		<text value="Free"/>
+	</reason>
+	<description value="Free"/>
+	<slot>
+		<reference value="Slot/73195"/>
+	</slot>
+	<created value="2017-10-23T12:53:38+03:00"/>
+	<participant>
+		<type>
+			<coding>
+				<system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+				<code value="PATIENT"/>
+				<display value="Patient"/>
+			</coding>
+		</type>
+		<actor>
+			<reference value="Patient/32754"/>
+		</actor>
+		<required value="required"/>
+		<status value="needs-action"/>
+	</participant>
+	<participant>
+		<type>
+			<coding>
+				<system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+				<code value="LOC"/>
+				<display value="Location"/>
+			</coding>
+		</type>
+		<actor>
+			<reference value="Location/196424"/>
+		</actor>
+		<required value="required"/>
+		<status value="needs-action"/>
+	</participant>
+	<participant>
+		<type>
+			<coding>
+				<system value="http://hl7.org/fhir/ValueSet/encounter-participant-type"/>
+				<code value="SERVICE"/>
+				<display value="Service"/>
+			</coding>
+		</type>
+		<actor>
+			<reference value="HealthcareService/69426"/>
+		</actor>
+		<required value="required"/>
+		<status value="needs-action"/>
+	</participant>
+</Appointment>
