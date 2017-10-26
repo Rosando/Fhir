@@ -226,7 +226,7 @@ namespace Fhir.SimpleCRUD
         }
 
         /// <summary>
-        /// Current not used in the application
+        /// Currently not used in the application
         /// </summary>
         /// <param name="given"></param>
         /// <param name="family"></param>
