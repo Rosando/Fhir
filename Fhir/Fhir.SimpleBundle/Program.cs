@@ -17,39 +17,7 @@ namespace Fhir.SimpleBundle
         {
             CreateResourcesIndividuallyAndFetchBundle();
 
-            //Bundle bundle = new Bundle();
-            //bundle.Type = Bundle.BundleType.Transaction;
-            //bundle.Entry = new List<Bundle.EntryComponent>()
-            //{
-            //    new Bundle.EntryComponent()
-            //    {
-            //        Resource = patient,
-            //        Request = new Bundle.RequestComponent() { Method = Bundle.HTTPVerb.POST }
-            //    },
-            //    new Bundle.EntryComponent()
-            //    {
-            //        Resource = condition,
-            //        Request = new Bundle.RequestComponent() { Method = Bundle.HTTPVerb.POST }
-            //    }
-            //};
-
-            //Bundle resultBundle = new Bundle();
-
-            //try
-            //{
-            //    var xml = FhirSerializer.SerializeResourceToXml(bundle);
-            //    LogToFile(XDocument.Parse(xml).ToString());
-
-            //    resultBundle = fhirClient.Transaction(bundle);
-            //    //result.
-
-            //    var resultXml = FhirSerializer.SerializeResourceToXml(resultBundle);
-            //    LogToFile(XDocument.Parse(resultXml).ToString());
-            //}
-            //catch (Exception ex)
-            //{
-            //    LogToFile(ex.ToString());
-            //}
+            CreateResourcesFromBundle();
         }
 
         public static void CreateResourcesIndividuallyAndFetchBundle()
@@ -67,6 +35,23 @@ namespace Fhir.SimpleBundle
             GetEverythingForPatient(responsePatient.Id);
 
             LogToFile("End CreateResourcesIndividuallyAndFetchBundle - " + DateTime.Now.ToString());
+        }
+
+        public static void CreateResourcesFromBundle()
+        {
+            LogToFile("Begin CreateResourcesFromBundle - " + DateTime.Now.ToString());
+
+            Patient patient = CreatePatient("Jane", "Doe", new DateTime(1993, 07, 15));
+
+            Condition condition = CreateCondition(patient, "Case 5", "Critical");
+
+            Bundle bundle = CreateSaveBundle(patient, condition);
+
+            string patientId = GetIndividualResourceFromBundle(bundle);
+
+            GetEverythingForPatient(patientId);
+
+            LogToFile("End CreateResourcesFromBundle - " + DateTime.Now.ToString());
         }
 
         public static Patient CreatePatient(string given, string family, DateTime birthDate)
@@ -212,6 +197,73 @@ namespace Fhir.SimpleBundle
             {
                 LogToFile(ex.ToString());
             }
+        }
+
+        public static Bundle CreateSaveBundle(Patient patient, Condition condition)
+        {
+            Bundle bundle = new Bundle();
+            Bundle responseBundle = new Bundle();
+
+            bundle.Type = Bundle.BundleType.Transaction;
+            bundle.Entry = new List<Bundle.EntryComponent>()
+            {
+                new Bundle.EntryComponent()
+                {
+                    Resource = patient,
+                    Request = new Bundle.RequestComponent() { Method = Bundle.HTTPVerb.POST }
+                },
+                new Bundle.EntryComponent()
+                {
+                    Resource = condition,
+                    Request = new Bundle.RequestComponent() { Method = Bundle.HTTPVerb.POST }
+                }
+            };
+            
+            try
+            {
+                LogToFile("Created bundle with patient and condition using POCO: ");
+
+                var xml = FhirSerializer.SerializeResourceToXml(bundle);
+                LogToFile(XDocument.Parse(xml).ToString());
+
+                FhirClient fhirClient = new FhirClient(FhirClientEndPoint);
+                responseBundle = fhirClient.Transaction(bundle);
+
+                LogToFile("Response bundle for patient and condition: ");
+
+                var resultXml = FhirSerializer.SerializeResourceToXml(responseBundle);
+                LogToFile(XDocument.Parse(resultXml).ToString());
+            }
+            catch (Exception ex)
+            {
+                LogToFile(ex.ToString());
+            }
+
+            return responseBundle;
+        }
+
+        public static string GetIndividualResourceFromBundle(Bundle bundle)
+        {
+            LogToFile("Get Individual Resource From Bundle:");
+
+            string patientId = string.Empty;
+            foreach (var entryItem in bundle.Entry)
+            {
+                Uri uri = new Uri(FhirClientEndPoint + entryItem.Response.Location);
+
+                FhirClient fhirClient = new FhirClient(FhirClientEndPoint);
+                var resource = fhirClient.Get(uri);
+
+                var resourceXml = FhirSerializer.SerializeResourceToXml(resource);
+                LogToFile(XDocument.Parse(resourceXml).ToString());
+
+                if (resource.ResourceType == ResourceType.Patient)
+                {
+                    patientId = resource.Id;
+                }
+            }
+
+            return patientId;
         }
 
         /// <summary>
