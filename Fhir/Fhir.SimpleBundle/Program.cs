@@ -15,11 +15,7 @@ namespace Fhir.SimpleBundle
 
         public static void Main(string[] args)
         {
-            LogToFile("Begin CRUD - " + DateTime.Now.ToString());
-
-            Patient patient = CreatePatient("John", "Doe", new DateTime(1992, 12, 19));
-
-            Condition condition = CreateCondition(patient, "Case A", "High");
+            CreateResourcesIndividuallyAndFetchBundle();
 
             //Bundle bundle = new Bundle();
             //bundle.Type = Bundle.BundleType.Transaction;
@@ -54,8 +50,23 @@ namespace Fhir.SimpleBundle
             //{
             //    LogToFile(ex.ToString());
             //}
+        }
 
-            LogToFile("End CRUD - " + DateTime.Now.ToString());
+        public static void CreateResourcesIndividuallyAndFetchBundle()
+        {
+            LogToFile("Begin CreateResourcesIndividuallyAndFetchBundle - " + DateTime.Now.ToString());
+
+            Patient patient = CreatePatient("John", "Doe", new DateTime(1992, 12, 19));
+
+            Patient responsePatient = SavePatient(patient);
+
+            Condition condition = CreateCondition(responsePatient, "Case A", "High");
+
+            Condition responseCondition = SaveCondition(condition);
+
+            GetEverythingForPatient(responsePatient.Id);
+
+            LogToFile("End CreateResourcesIndividuallyAndFetchBundle - " + DateTime.Now.ToString());
         }
 
         public static Patient CreatePatient(string given, string family, DateTime birthDate)
@@ -100,7 +111,7 @@ namespace Fhir.SimpleBundle
 
             try
             {
-                LogToFile("Patient: ");
+                LogToFile("Created Patient Using POCO: ");
                 
                 var patientXml = FhirSerializer.SerializeResourceToXml(patient);
                 LogToFile(XDocument.Parse(patientXml).ToString());
@@ -111,6 +122,27 @@ namespace Fhir.SimpleBundle
             }
 
             return patient;
+        }
+
+        public static Patient SavePatient(Patient patient)
+        {
+            Patient responsePatient = new Patient();
+
+            try
+            {
+                FhirClient fhirClient = new FhirClient(FhirClientEndPoint);
+                responsePatient = fhirClient.Create(patient);
+
+                LogToFile("Patient Response After Creation: ");
+                var responsePatientXml = FhirSerializer.SerializeResourceToXml(responsePatient);
+                LogToFile(XDocument.Parse(responsePatientXml).ToString());
+            }
+            catch (Exception ex)
+            {
+                LogToFile(ex.ToString());
+            }
+
+            return responsePatient;
         }
 
         public static Condition CreateCondition(Patient patient, string category, string severity)
@@ -124,9 +156,11 @@ namespace Fhir.SimpleBundle
             ResourceReference resourceReference = new ResourceReference();
             resourceReference.ReferenceElement = new FhirString(patient.GetType().Name + "/" + patient.Id);
 
+            condition.Subject = resourceReference;
+
             try
             {
-                LogToFile("Condition: ");
+                LogToFile("Created Condition Using POCO: ");
 
                 var conditionXml = FhirSerializer.SerializeResourceToXml(condition);
                 LogToFile(XDocument.Parse(conditionXml).ToString());
@@ -138,6 +172,46 @@ namespace Fhir.SimpleBundle
             }
 
             return condition;
+        }
+
+        public static Condition SaveCondition(Condition condition)
+        {
+            Condition responseCondition = new Condition();
+
+            try
+            {
+                FhirClient fhirClient = new FhirClient(FhirClientEndPoint);
+                responseCondition = fhirClient.Create(condition);
+
+                LogToFile("Created Response After Creation: ");
+                var responseConditionXml = FhirSerializer.SerializeResourceToXml(responseCondition);
+                LogToFile(XDocument.Parse(responseConditionXml).ToString());
+            }
+            catch (Exception ex)
+            {
+                LogToFile(ex.ToString());
+            }
+
+            return responseCondition;
+        }
+
+        public static void GetEverythingForPatient(string patientId)
+        {
+            UriBuilder uriBuilder = new UriBuilder(FhirClientEndPoint);
+            uriBuilder.Path = "Patient/" + patientId;
+
+            try
+            {
+                FhirClient fhirClient = new FhirClient(FhirClientEndPoint);
+                Resource resultResource = fhirClient.InstanceOperation(uriBuilder.Uri, "everything");
+
+                var xml = FhirSerializer.SerializeResourceToXml(resultResource);
+                LogToFile(XDocument.Parse(xml).ToString());
+            }
+            catch (Exception ex)
+            {
+                LogToFile(ex.ToString());
+            }
         }
 
         /// <summary>
