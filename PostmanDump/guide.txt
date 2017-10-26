@@ -1,1 +1,7 @@
 Import the collection and environment files in postman
+
+How to use and share Postman Collections:
+https://www.youtube.com/watch?v=bF8q8wvLs8A
+
+Import and export data into postman and use environmental variables:
+https://www.youtube.com/watch?v=WQwYNu4PCpg
