@@ -15,6 +15,15 @@ namespace Fhir.SimpleCRUD
 
         public static void Main(string[] args)
         {
+            SimpleCRUD();
+
+            //DetailedPatientCreation();
+        }
+
+        #region SimpleCRUD
+
+        public static void SimpleCRUD()
+        {
             LogToFile("Begin CRUD - " + DateTime.Now.ToString());
 
             Patient createdPatient = CreatePatient("John", "Doe", new DateTime(1992, 12, 19));
@@ -108,7 +117,7 @@ namespace Fhir.SimpleCRUD
                 
                 FhirClient fhirClient = new FhirClient(FhirClientEndPoint);
                 responsePatient = fhirClient.Read<Patient>(location);
-
+                
                 LogToFile("Response: ");
                 var responsePatientXml = FhirSerializer.SerializeResourceToXml(responsePatient);
                 LogToFile(XDocument.Parse(responsePatientXml).ToString());
@@ -269,5 +278,16 @@ namespace Fhir.SimpleCRUD
                 sw.Write("\n\n");
             }
         }
+
+        #endregion
+
+        #region DetailedPatientCreation
+
+        public static void DetailedPatientCreation()
+        {
+
+        }
+
+        #endregion
     }
 }
